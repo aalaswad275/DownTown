@@ -18,11 +18,19 @@
             @foreach ($slider as $s)
             <tr>
                 <td> {{ $s->id}}</td>
-                <td><a href="#"><img src="{{asset('frontend/img/'.$s->image)}}"  height="120px" width="120px" srcset="" ></a></td>
+                <td><a href="{{route('sliders.show',$s->id)}}"><img src="{{asset('frontend/img/'.$s->image)}}"  height="120px" width="120px" srcset="" ></a></td>
                 <td>{{$s->title}}</td>
                 <td>{{$s->created_at}}</td>
                 <td> @if($s->active==1) {{_('active')}} @else {{_('unactive')}}@endif</td>
-                <td> <a href=""> {{_('edit')}}</a></td>
+                <td> <a href="{{route('sliders.edit',$s->id)}}" class="btn btn-sm btn-danger"> {{_('edit')}}</a>
+                    <form action="{{route('sliders.destroy',$s->id)}}" method="post" class="d-inline-block"
+                        onsubmit="return confirm('هل تريد حدف الصورة ');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class=" btn btn-sm btn-danger"> {{_('Delete')}}</button>
+
+                    </form>
+                </td>
             </tr>
 
             @endforeach

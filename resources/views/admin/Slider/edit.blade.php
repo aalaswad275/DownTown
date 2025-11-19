@@ -22,7 +22,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="Description">{{_('Pleasse enter description')}}</label>
-                    <textarea name="image_disc" id="Description" cols="30" rows="10" required> {{$slider->disc)}}</textarea>
+                    <textarea name="image_disc" id="Description" cols="30" rows="10" required> {{$slider->description}}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="link">{{_('please enter link ')}}</label>
@@ -34,10 +34,10 @@
                 </div>
                 <div class="mb-3">
                     <div class="image">
-                        <img src="{{asset('frontend/img/'.$slider->image)}}" alt="" srcset="">
+                        <img src="{{asset('frontend/img/'.$slider->image)}}"   height="120px" width="120px" alt="" srcset="">
                     </div>
                     <label for="image">{{_('upload image')}}</label>
-                    <input type="file" name="slider_image" id="image" required>
+                    <input type="file" name="slider_image"  id="image" required>
                 </div>
                 <button type="submit" class="btn btn-success">{{_('submit')}}</button>
 
