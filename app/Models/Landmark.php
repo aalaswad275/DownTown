@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Landmark extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'gallery' => 'array',
+        'tags' => 'array',
+        'opening_hours' => 'array',
+    ];
 }

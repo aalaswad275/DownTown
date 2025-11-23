@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth; //admin
 use Illuminate\Support\Facades\File; // تحميل صور
-
+use Illuminate\Support\Str;
 use App\Models\Landmark;
 
 class LandMarksController extends Controller
@@ -55,16 +55,31 @@ class LandMarksController extends Controller
             $file->move(public_path('frontend/img/landmarks'),$filename);
             $imagepath=$filename;
         }
-        $gallery=[];
-        if($request->hasFile('gallery')){
-            foreach($request->file('gallery') as $galleryfile){
-                $file=$request->file($galleryfile);
-                $filename= time().'_'.$file->getClientOriginalName();
-                $gallery[]=$file->move(public_path('frontend/img/landmarks/gallery'),$filename);
-            }
+        $gallery = [];
+
+if ($request->hasFile('gallery')) {
+
+    foreach ($request->file('gallery') as $galleryfile) {  // $galleryfile is the file!
+
+        if ($galleryfile->isValid()) { // ✅ Correct
+
+            $filename = time() . '_' . $galleryfile->getClientOriginalName();
+
+            $galleryfile->move(
+                public_path('frontend/img/landmarks/gallery'),
+                $filename
+            );
+
+            $gallery[] = 'frontend/img/landmarks/gallery/' . $filename;
         }
+    }
+}
+
+
         // ? هي عبارة عن if
-        $tags= $request->tags ? explode(',',str_replace(' ','', $request->tags)):null;
+        $tags = $request->tags
+            ? explode(',', str_replace(' ', '', $request->tags))
+            : [];
         $openingHours= $request->opening_hours ?? null;
 
         $landmark =new Landmark();
@@ -74,19 +89,20 @@ class LandMarksController extends Controller
         $landmark->image = $imagepath;
         $landmark->gallery = $gallery;
         $landmark->address = $request->address;
-        $landmark->city_id = $request->city;
+        $landmark->city_id = 10;
         $landmark->latitude= $request->latitude;
-        $landmark->longtude= $request->longtude;
+        $landmark->longtude= $request->longitude;
         $landmark->category= $request->category;
         $landmark->tags= $tags;
         $landmark->website= $request->website;
         $landmark->phone= $request->phone;
         $landmark->opening_hours= $openingHours;
-        $landmark->rating= $request->ratings ?? 0;
+        $landmark->ratings= $request->ratings ?? 0;
         $landmark->views= 0;
         $landmark->active= $request->has('active');
         $landmark->save();
-        return redirect()->action('landmark.index');
+        return redirect()->route('landmarks.create')->with('success', 'Landmark created successfully.');
+
 
     }
 
@@ -112,6 +128,115 @@ class LandMarksController extends Controller
     public function update(Request $request, string $id)
     {
         //
+    $landmark = Landmark::findOrFail($id);
+
+    // -----------------------
+    // VALIDATION
+    // -----------------------
+    $request->validate([
+        "name"        => "required|max:255",
+        "description" => "nullable",
+        "image"       => "nullable|image",
+        "gallery.*"   => "image|mimes:jpg,jpeg,png,webp",
+        "tags"        => "nullable|string",
+        "phone"       => "nullable",
+        "longitude"   => "nullable",
+        "latitude"    => "nullable",
+    ]);
+
+
+    // -------------------------------------
+    // UPDATE MAIN IMAGE (optional)
+    // -------------------------------------
+    $imagepath = $landmark->image;
+
+    if ($request->hasFile('image') && $request->file('image')->isValid()) {
+
+        // delete old
+        if ($landmark->image && file_exists(public_path($landmark->image))) {
+            unlink(public_path($landmark->image));
+        }
+
+        $file = $request->file('image');
+        $filename = time() . '-' . $file->getClientOriginalName();
+        $file->move(public_path('frontend/img/landmarks'), $filename);
+
+        $imagepath = 'frontend/img/landmarks/' . $filename;
+    }
+
+
+    // -------------------------------------
+    // UPDATE GALLERY (merge new + existing)
+    // -------------------------------------
+    $gallery = $landmark->gallery ?? []; // old gallery images
+
+    if ($request->hasFile('gallery')) {
+
+        foreach ($request->file('gallery') as $galleryfile) {
+
+            if ($galleryfile->isValid()) {
+
+                $filename = time() . '_' . $galleryfile->getClientOriginalName();
+                $galleryfile->move(
+                    public_path('frontend/img/landmarks/gallery'),
+                    $filename
+                );
+
+                $gallery[] = 'frontend/img/landmarks/gallery/' . $filename;
+            }
+        }
+    }
+
+    // delete specific gallery image
+    if ($request->filled('delete_gallery')) {
+
+        foreach ($request->delete_gallery as $deletePath) {
+
+            // remove file from disk
+            if (file_exists(public_path($deletePath))) {
+                unlink(public_path($deletePath));
+            }
+
+            // remove from array
+            $gallery = array_values(array_diff($gallery, [$deletePath]));
+        }
+    }
+
+
+    // -------------------------------------
+    // TAGS (string → array)
+    // -------------------------------------
+    $tags = $request->tags
+            ? explode(',', str_replace(' ', '', $request->tags))
+            : [];
+
+
+    // -------------------------------------
+    // UPDATE LANDMARK
+    // -------------------------------------
+    $landmark->name          = $request->name;
+    $landmark->description   = $request->description;
+    $landmark->slug          = Str::slug($request->name) . '-' . uniqid();
+    $landmark->image         = $imagepath;
+    $landmark->gallery       = $gallery;
+    $landmark->address       = $request->address;
+    $landmark->city_id       = $request->city_id;
+    $landmark->latitude      = $request->latitude;
+    $landmark->longitude     = $request->longitude;
+    $landmark->category      = $request->category;
+    $landmark->tags          = $tags;
+    $landmark->website       = $request->website;
+    $landmark->phone         = $request->phone;
+    $landmark->opening_hours = $request->opening_hours;
+    $landmark->rating        = $request->ratings ?? $landmark->rating;
+    $landmark->is_active     = $request->boolean('active', $landmark->is_active);
+
+    $landmark->save();
+
+    return redirect()->route('landmark.index')
+        ->with('success', 'Landmark updated successfully');
+
+
     }
 
     /**

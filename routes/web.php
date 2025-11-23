@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\GenralController;
 use App\Http\Controllers\SLiderController;
+use App\Http\Controllers\LandMarksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,8 @@ Route::get('/admin', function () {
 
 Route::resource('Store',App\Http\Controllers\StoreController::class);
 Route::resource('sliders',App\Http\Controllers\SLiderController::class);
+Route::resource('landmarks',App\Http\Controllers\LandMarksController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
