@@ -2,12 +2,13 @@
 @section('content')
 <div class="container py-4">
     <h3>{{_('Add New Landmark')}}</h3>
-    <form action="{{route('landmarks.store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('landmarks.update', $landmark->id)}}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
 
         <div class="mb-3">
             <label for="landmarkname"> {{_('enter lanadmark')}}</label>
-            <input type="text" name="name" id="landmarkname" class="form-control" value="{{old('name')}}" required>
+            <input type="text" name="name" id="landmarkname" class="form-control" value="$landmark->name" required>
 
         </div>
         <div class="mb-3">
