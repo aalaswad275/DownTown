@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth; //admin
 use Illuminate\Support\Facades\File; // تحميل صور
 use Illuminate\Support\Str;
 use App\Models\Landmark;
+use App\Models\City;
+use App\Models\Category;
 
 class LandMarksController extends Controller
 {
@@ -16,8 +18,10 @@ class LandMarksController extends Controller
     public function index()
     {
         //
-        $landmarks= Landmark::All();;
-        return view('admin.landmarks.index',compact('landmarks'));
+        $landmarks= Landmark::All();
+        $cities = City::All();
+        $catgories= Category::All();
+        return view('admin.landmarks.index',compact('landmarks','cities','catgories'));
 
     }
 
@@ -27,7 +31,9 @@ class LandMarksController extends Controller
     public function create()
     {
         //
-        return view('admin.landmarks.create');
+        $cities = City::All();
+        $catgories= Category::All();
+        return view('admin.landmarks.create',compact('cities','catgories'));
     }
 
     /**
@@ -112,6 +118,10 @@ if ($request->hasFile('gallery')) {
     public function show(string $id)
     {
         //
+        $landmarks= Landmark::find($id);
+        $cities = City::All();
+        $catgories= Category::All();
+        return view('admin.landmarks.show',compact('landmarks','cities','catgories'));
     }
 
     /**
@@ -120,6 +130,10 @@ if ($request->hasFile('gallery')) {
     public function edit(string $id)
     {
         //
+        $landmarks= Landmark::find($id);
+        $cities = City::All();
+        $catgories= Category::All();
+        return view('admin.landmarks.edit',compact('landmarks','cities','catgories'));
     }
 
     /**

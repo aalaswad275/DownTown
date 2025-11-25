@@ -1,124 +1,123 @@
-@extends('layout.backapp')
+@extends('layouts.app')
+
 @section('content')
-<div class="container py-4">
-    <h3>{{_('Add New Landmark')}}</h3>
-    <form action="{{route('landmarks.update', $landmark->id)}}" method="post" enctype="multipart/form-data">
+
+<div class="container">
+    <h2>Edit Landmark</h2>
+    <form action="{{ route('landmark.update', $landmark->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-        <div class="mb-3">
-            <label for="landmarkname"> {{_('enter lanadmark')}}</label>
-            <input type="text" name="name" id="landmarkname" class="form-control" value="$landmark->name" required>
 
-        </div>
+        {{-- Name --}}
         <div class="mb-3">
-            <label for="Descrpition"> {{_('enter Descrpition')}}</label>
-            <textarea name="description" id="Descrpition" class="form-control"> {{old('description')}}</textarea>
+            <label>Name</label>
+            <input type="text" name="name" value="{{ $landmark->name }}" class="form-control" required>
         </div>
+
+        {{-- Description --}}
         <div class="mb-3">
-            <label for="address"> {{_('enter address')}}</label>
-            <input type="text" name="address" id="address" class="form-control" value="{{old('address')}}" >
+            <label>Description</label>
+            <textarea name="description" class="form-control">{{ $landmark->description }}</textarea>
         </div>
+
+
+        {{-- Main Image --}}
         <div class="mb-3">
-            <label for="city"> {{_('choose city')}}</label>
-            <select name="city_id" id="city">
-                <option value=""> {{_('Select City')}}</option>
-                @foreach ($cities as $city)
-                <option value="{{$city->id}}">{{$city->name}}</option>
+            <label>Main Image</label><br>
+
+            @if($landmark->image)
+                <img src="{{ asset($landmark->image) }}" width="120" class="mb-2">
+            @endif
+
+            <input type="file" name="image" class="form-control">
+        </div>
+
+
+        {{-- Gallery --}}
+        <div class="mb-3">
+            <label>Gallery Images</label>
+            <input type="file" name="gallery[]" class="form-control" multiple>
+
+            <div class="mt-2 d-flex flex-wrap">
+                @foreach($landmark->gallery ?? [] as $img)
+                    <div class="me-2 text-center">
+                        <img src="{{ asset($img) }}" width="120" class="mb-1">
+                        <label>
+                            <input type="checkbox" name="delete_gallery[]" value="{{ $img }}">
+                            Delete
+                        </label>
+                    </div>
                 @endforeach
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="Category"> {{_('choose category')}}</label>
-            <select name="category" id="Category">
-                <option value=""> {{_('Select Category')}}</option>
-                @foreach ($category as $cat)
-                <option value="{{$cat->id}}">{{$cat->name}}</option>
-                @endforeach
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="Tags"> {{_('enter tags')}}</label>
-            <input type="text" name="tags" id="Tags" class="form-control" value="{{old('tags')}}"  placeholder="museum,tourism">
-        </div>
-        <div class="mb-3">
-            <label for="website"> {{_('enter website')}}</label>
-            <input type="url" name="website" id="website" class="form-control" value="{{old('website')}}" >
-        </div>
-        <div class="mb-3">
-            <label for="Openhours"> {{_('enter opening Hours')}}</label>
-            <input type="text" name="opening_hours" id="Openhours" class="form-control" value="{{old('opening_hours')}}" placeholder='{ "Mon":"9:6"}' >
-        </div>
-        <div class="mb-3">
-            <label for="Ratings"> {{_('enter Rating')}}</label>
-            <input type="number" name="rating" id="Ratings" class="form-control" min="0" max="5" step="0.1" value="{{old('rating')}}" >
-        </div>
-        <div class="mb-3">
-            <label for="mainimage"> {{_('upload Image')}}</label>
-            <input type="file" name="image" id="mainimage" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="gallery"> {{_('enter address')}}</label>
-            <input type="file" name="gallery[]" id="gallery" class="form-control" multiple >
-        </div>
-        <div class="row">
-            <div class=" col-md-6 mb-3">
-            <label for="Latitude"> {{_('Latitude')}}</label>
-            {{-- الانه القيمه من الخريطه --}}
-            <input type="text" name="latitude" id="Latitude" class="form-control" readonly >
-            </div>
-            <div class=" col-md-6 mb-3">
-            <label for="Longitude"> {{_('Longitude')}}</label>
-            {{-- الانه القيمه من الخريطه --}}
-            <input type="text" name="longitude" id="Longitude" class="form-control" readonly >
             </div>
         </div>
+
+
+        {{-- Address --}}
         <div class="mb-3">
-            <label class="form-label">  {{_('select Location on map')}}</label>
-            <div id="map" style="height: 400px;"></div>
+            <label>Address</label>
+            <input type="text" name="address" value="{{ $landmark->address }}" class="form-control">
         </div>
-        <div class="form-check mb-3">
-            <input type="checkbox" name="is_active" class="form-check-input" checked>
-            <label  class="form-check-label"></label>
+
+
+        {{-- Map Picker --}}
+        <label>Pick Location</label>
+        <div id="map" style="height: 400px;"></div>
+
+        <input type="hidden" name="latitude" id="lat" value="{{ $landmark->latitude }}">
+        <input type="hidden" name="longitude" id="lng" value="{{ $landmark->longitude }}">
+
+
+        {{-- Tags --}}
+        <div class="mb-3 mt-3">
+            <label>Tags (comma separated)</label>
+            <input type="text" name="tags"
+                   value="{{ $landmark->tags ? implode(',', $landmark->tags) : '' }}"
+                   class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary"> {{_('add landmark')}}</button>
+
+
+        {{-- Active --}}
+        <div class="mb-3">
+            <label>
+                <input type="checkbox" name="active" {{ $landmark->is_active ? 'checked' : '' }}>
+                Active
+            </label>
+        </div>
+
+
+        <button class="btn btn-primary">Update</button>
+
     </form>
 </div>
+
+
+
 <script>
-// id الخاص بطول والعرض
-let latInput=document.getElementById('Latitude');
-let lngInput=document.getElementById('Longitude');
+    document.addEventListener("DOMContentLoaded", function () {
 
+        let lat = {{ $landmark->latitude ?? 32.8872 }};
+        let lng = {{ $landmark->longitude ?? 13.1913 }};
 
-// موقع ليبيا -طرابلس
-let defaultLat= 32.8872;
-let defaultLng=13.1913;
+        let map = L.map('map').setView([lat, lng], 7);
 
-//
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: "© OpenStreetMap contributors"
+        }).addTo(map);
 
-let map= L.map('map').setView([defaultLat,defaultLng],7);
+        let marker = L.marker([lat, lng], { draggable: true }).addTo(map);
 
-//  اضافة بيانات الخريطة
- L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
- {attibution: ' OpenStreetMap Contributors'}).addTo(map);
+        marker.on("dragend", function (e) {
+            document.getElementById("lat").value = e.target.getLatLng().lat;
+            document.getElementById("lng").value = e.target.getLatLng().lng;
+        });
 
- // اضافة الموشر الخريطة
-let marker=L.marker([defaultLat,defaultLng], {draggable:true}).addTo(map);
-
-latInput.value=defaultLat;
-lngInput.value=defaultLng;
-
-marker.on('dargend', function(e){
-let pos= marker.getLatLng();
-latInput.value= pos.lat;
-lngInput.value= pos.lng;
-});
-
-map.on('click',function(e){
-marker.setLatLng(e.latlng);
-latInput.value= e.latlng.lat;
-lngInput.value= e.latlng.lng;
-});
-
+        map.on("click", function (e) {
+            marker.setLatLng(e.latlng);
+            document.getElementById("lat").value = e.latlng.lat;
+            document.getElementById("lng").value = e.latlng.lng;
+        });
+    });
 </script>
+
 @endsection
