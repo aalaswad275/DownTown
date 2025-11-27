@@ -1,4 +1,4 @@
-@extends('layout.lapp')
+@extends('layout.backapp')
 
 @section('content')
 
@@ -17,7 +17,7 @@
 
 
     <div class="row">
-        <div class="card">
+        <div class="card col-md-12">
             <table class="table table-hover table-striped ">
                 <thead>
                     <tr>
@@ -36,8 +36,8 @@
                      <tr>
                         <td> {{$landmark->id}}</td>
                         @if($landmark->image)
-                        <td> <img src="{{asset('frontend/img/landmarks/'.$landmark->image)}}"
-                            height="60px"  width="60px"></td>
+                        <td> <a href="{{route('landmarks.show',$landmark->id)}}"><img src="{{asset('frontend/img/landmarks/'.$landmark->image)}}"
+                            height="60px"  width="60px"></a></td>
                         @else
                         <td> {{_('No  Image Upload')}}</td>
                         @endif
@@ -53,28 +53,29 @@
                             @endforeach
                         </td>
                         <td>
-                            @foreach($categories as  $cat)
+                            @foreach($catgories as  $cat)
                             @if($landmark->category == $cat->id)
                             {{$cat->name}}
                             @endif
                             @endforeach
                         </td>
                         <td>
-                            @if($landmark->active)
-                            <span class="badge badge-seccuss">{{_('active')}}</span>
+                            @if($landmark->active==1)
+                            <span class="badge badge-pill badge-success">{{_('active')}}</span>
                             @else
                             <span class="badge badge-danger">{{_('not active')}}</span>
                             @endif
                         </td>
+                        <td> {{$landmark->created_at->format('Y-m-d')}}</td>
 
                         <td> <a href="{{route('landmarks.edit', $landmark->id)}}" >
-                             <span class="fa fa-edit"></span>
+                             <span class="fe fe-edit"></span>
                             </a>
                             <form action="{{route('landmarks.destroy',$landmark->id)}}" method="post" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger">
-                                    <span class="fa fa-trash"> </span>
+                                    <span class="fe fe-trash"> </span>
                                 </button>
 
                             </form>

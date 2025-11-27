@@ -31,7 +31,7 @@
             <label for="Category"> {{_('choose category')}}</label>
             <select name="category" id="Category">
                 <option value=""> {{_('Select Category')}}</option>
-                @foreach ($category as $cat)
+                @foreach ($catgories as $cat)
                 <option value="{{$cat->id}}">{{$cat->name}}</option>
                 @endforeach
             </select>

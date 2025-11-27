@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('address')->nullabe();
             $table->string('location')->nullabe();
             // اذا تم مسح المدنية من الجدول تباقي البيانات
-            $table->foreignId('city')->nullabe()->constrained()->nullonDelete();
+            $table->integer('city_id')->nullable();
             $table->string('category')->nullable();
             $table->json('tags')->nullable();
             // الموقع الجعرافي

@@ -10,14 +10,16 @@
               <div class="row mt-5 align-items-center">
                 <div class="col-md-3 text-center mb-5">
                   <div class="avatar avatar-xl">
-                    <img src="{{asset('frontend/img/landmark'.$landmarks->image)}}" alt="..." class="avatar-img round-square">
+                    <img src="{{asset('frontend/img/landmarks/'.$landmarks->image)}}" alt="..." class="avatar-img round-square">
                   </div>
                 </div>
                 <div class="col">
                   <div class="row align-items-center">
                     <div class="col-md-7">
                       <h4 class="mb-1">{{$landmarks->name}}</h4>
-                      <p class="small mb-3"><span class="badge badge-dark">{{$landmarks->tags}}</span></p>
+                      <p class="small mb-3"><span class="badge badge-dark">@if(is_array($landmarks->tags))
+    {{ implode(', ', $landmarks->tags) }}
+@endif</span></p>
                     </div>
                   </div>
                   <div class="row mb-4">
@@ -33,72 +35,29 @@
                 </div>
               </div>
               <div class="row my-4">
-                <div class="col-md-4">
+
+
+                   @foreach($landmarks->gallery ?? [] as $img)
+                   <div class="col-md-4">
                   <div class="card mb-4 shadow">
                     <div class="card-body my-n3">
                       <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-lg bg-light">
-                            <i class="fe fe-user fe-24 text-primary"></i>
-                          </span>
+                        <div class="col-12 text-center py-4 px-4">
+                             <img src="{!! asset($img) !!}" width="100%" height="120px" class="mb-1">
+
                         </div> <!-- .col -->
-                        <div class="col">
-                          <a href="#">
-                            <h3 class="h5 mt-4 mb-1">Personal</h3>
-                          </a>
-                          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus.</p>
-                        </div> <!-- .col -->
+
                       </div> <!-- .row -->
                     </div> <!-- .card-body -->
-                    <div class="card-footer">
-                      <a href="" class="d-flex justify-content-between text-muted"><span>Account Settings</span><i class="fe fe-chevron-right"></i></a>
-                    </div> <!-- .card-footer -->
+
                   </div> <!-- .card -->
                 </div> <!-- .col-md-->
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow">
-                    <div class="card-body my-n3">
-                      <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-lg bg-light">
-                            <i class="fe fe-shield fe-24 text-primary"></i>
-                          </span>
-                        </div> <!-- .col -->
-                        <div class="col">
-                          <a href="#">
-                            <h3 class="h5 mt-4 mb-1">Security</h3>
-                          </a>
-                          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus.</p>
-                        </div> <!-- .col -->
-                      </div> <!-- .row -->
-                    </div> <!-- .card-body -->
-                    <div class="card-footer">
-                      <a href="" class="d-flex justify-content-between text-muted"><span>Security Settings</span><i class="fe fe-chevron-right"></i></a>
-                    </div> <!-- .card-footer -->
-                  </div> <!-- .card -->
-                </div> <!-- .col-md-->
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow">
-                    <div class="card-body my-n3">
-                      <div class="row align-items-center">
-                        <div class="col-3 text-center">
-                          <span class="circle circle-lg bg-light">
-                            <i class="fe fe-bell fe-24 text-primary"></i>
-                          </span>
-                        </div> <!-- .col -->
-                        <div class="col">
-                          <a href="#">
-                            <h3 class="h5 mt-4 mb-1">Notifications</h3>
-                          </a>
-                          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus.</p>
-                        </div> <!-- .col -->
-                      </div> <!-- .row -->
-                    </div> <!-- .card-body -->
-                    <div class="card-footer">
-                      <a href="" class="d-flex justify-content-between text-muted"><span>Notification Settings</span><i class="fe fe-chevron-right"></i></a>
-                    </div> <!-- .card-footer -->
-                  </div> <!-- .card -->
-                </div> <!-- .col-md-->
+
+                @endforeach
+
+
+
+
               </div> <!-- .row-->
               <h3>Subscription</h3>
               <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus.</p>

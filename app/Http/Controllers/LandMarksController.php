@@ -236,18 +236,18 @@ if ($request->hasFile('gallery')) {
     $landmark->address       = $request->address;
     $landmark->city_id       = $request->city_id;
     $landmark->latitude      = $request->latitude;
-    $landmark->longitude     = $request->longitude;
+    $landmark->longtude     = $request->longitude;
     $landmark->category      = $request->category;
     $landmark->tags          = $tags;
     $landmark->website       = $request->website;
     $landmark->phone         = $request->phone;
     $landmark->opening_hours = $request->opening_hours;
-    $landmark->rating        = $request->ratings ?? $landmark->rating;
-    $landmark->is_active     = $request->boolean('active', $landmark->is_active);
+    $landmark->ratings        = $request->ratings ?? $landmark->ratings;
+    $landmark->active     = $request->boolean('active', $landmark->active);
 
     $landmark->save();
 
-    return redirect()->route('landmark.index')
+    return redirect()->route('landmarks.index')
         ->with('success', 'Landmark updated successfully');
 
 
@@ -259,5 +259,37 @@ if ($request->hasFile('gallery')) {
     public function destroy(string $id)
     {
         //
+
+    $landmark = Landmark::findOrFail($id);
+
+    /*------------------------------------------
+    | Delete MAIN image if exists
+    ------------------------------------------*/
+    if ($landmark->image && file_exists(public_path('frontend/img/landmarks/' . $landmark->image))) {
+        unlink(public_path('frontend/img/landmarks/' . $landmark->image));
+    }
+
+    /*------------------------------------------
+    | Delete GALLERY images if exists
+    ------------------------------------------*/
+    if (is_array($landmark->gallery)) {
+        foreach ($landmark->gallery as $img) {
+            $path = public_path($img);
+
+            if (file_exists($path)) {
+                unlink($path);
+            }
+        }
+    }
+
+    /*------------------------------------------
+    | Delete database record
+    ------------------------------------------*/
+    $landmark->delete();
+
+    return redirect()->route('landmarks.index')
+        ->with('success', 'Landmark deleted successfully');
+
+
     }
 }
