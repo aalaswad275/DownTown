@@ -62,6 +62,8 @@ class LandMarksController extends Controller
             $imagepath=$filename;
         }
         $gallery = [];
+        
+        
 
 if ($request->hasFile('gallery')) {
 
@@ -93,13 +95,14 @@ if ($request->hasFile('gallery')) {
         $landmark->description = $request->description;
         $landmark->slug = Str::slug($request->name).'-'.uniqid();
         $landmark->image = $imagepath;
-        $landmark->gallery = $gallery;
+        $landmark->gallery = json_encode($gallery); //
+        // $gallery;
         $landmark->address = $request->address;
-        $landmark->city_id = 10;
+        $landmark->city_id = $request->city_id;
         $landmark->latitude= $request->latitude;
         $landmark->longtude= $request->longitude;
         $landmark->category= $request->category;
-        $landmark->tags= $tags;
+        $landmark->tags= json_encode($tags); //$tags;
         $landmark->website= $request->website;
         $landmark->phone= $request->phone;
         $landmark->opening_hours= $openingHours;
@@ -275,7 +278,6 @@ if ($request->hasFile('gallery')) {
     if (is_array($landmark->gallery)) {
         foreach ($landmark->gallery as $img) {
             $path = public_path($img);
-
             if (file_exists($path)) {
                 unlink($path);
             }

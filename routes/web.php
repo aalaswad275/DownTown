@@ -7,6 +7,10 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\GenralController;
 use App\Http\Controllers\SLiderController;
 use App\Http\Controllers\LandMarksController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\GalleryController;
+
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,17 +26,27 @@ use App\Http\Controllers\LandMarksController;
 //     return view('layout.lapp');
 // });
 
-Route::get('/',[App\Http\Controllers\GenralController::class, 'Slider'])->name('slider');
-// Route::get('/', [App\Http\Controllers\GenralController::class, 'slider'])->name('slider');
 
-Route::get('/admin', function () {
-    return view('layout.backapp');
-});
+
+// routes/web.php
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+{
+	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+    Route::get('/',[App\Http\Controllers\GenralController::class, 'Slider'])->name('slider');
+
 
 Route::resource('Store',App\Http\Controllers\StoreController::class);
 Route::resource('sliders',App\Http\Controllers\SLiderController::class);
 Route::resource('landmarks',App\Http\Controllers\LandMarksController::class);
-
+Route::resource('comment',App\Http\Controllers\CommentController::class);
+Route::resource('gallery',App\Http\Controllers\GalleryController::class);
+Route::resource('stores',App\Http\Controllers\StoreController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+});
+
+
+
