@@ -33,7 +33,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
 	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    Route::get('/',[App\Http\Controllers\GenralController::class, 'Slider'])->name('slider');
+    Route::get('/',[App\Http\Controllers\GenralController::class, 'Slider'])->name('welcome');
+
+Route::get('/about',[App\Http\Controllers\GenralController::class, 'about'])->name('about');
+Route::get('/contact',[App\Http\Controllers\GenralController::class, 'contact'])->name('contact');
+Route::get('/gallery',[App\Http\Controllers\GenralController::class, 'gallery'])->name('gallery');
+Route::get('/service',[App\Http\Controllers\GenralController::class, 'service'])->name('service');
+
 
 
 Route::resource('Store',App\Http\Controllers\StoreController::class);

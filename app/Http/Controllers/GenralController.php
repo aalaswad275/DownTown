@@ -14,6 +14,19 @@ class GenralController extends Controller
         return view('welcome',compact('slider','count'));
 
     }
+   public function about(){
+    return view('main.about');
+   }
 
+   public function contact(){
+    return view('main.contact');
+   }
+   public function gallery(){
+    return view('main.gallery');
+   }
+
+   public function service(){
+    return view('main.service');
+   }
 
 }
