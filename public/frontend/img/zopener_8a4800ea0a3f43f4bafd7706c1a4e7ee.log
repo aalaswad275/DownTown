@@ -1,0 +1,102 @@
+[16732:14476:2025-12-4 19:50:13.201] Main Start
+[16732:14476:2025-12-4 19:50:13.201] Command line:"C:\Users\pc123\Desktop\DownTown\public\frontend\img\Zoom_cm_fo42pnktZ9vvrZo4_mnB608djuOFJ2v0f--2QZ3oslfe1pTDMNKm19@2yc-cPgMbnciWeNo_k868e47a3a045e313_.exe"  Instance:0x100000 Show State:1
+[16732:14476:2025-12-4 19:50:13.357] Zoo
+[16732:13876:2025-12-4 19:50:13.367] [process_requst] start, url:https://us06web.zoom.us/conf/launch
+[16732:13876:2025-12-4 19:50:14.55] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[16732:13876:2025-12-4 19:50:14.55] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[16732:13876:2025-12-4 19:50:14.55] [read_response_content] API call zHttpQueryInfo failed, error: 12150
+[16732:13876:2025-12-4 19:50:14.56] [log_response_content] Content length (1048576 as unknown):1048576 , Total read: 2138 , Error No: 0 , Status code: 200
+[16732:13876:2025-12-4 19:50:14.56] [log_response_content] header:
+[16732:13876:2025-12-4 19:50:14.56] HTTP/1.1 200 OK
+Date: Thu, 04 Dec 2025 17:50:14 GMT
+Content-Type: text/plain;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-zm-trackingid: v=2.0;clid=us06;rid=WEB_f7de52164093b61c3eb707fb5bf7b50c
+x-content-type-options: nosniff
+content-security-policy: upgrade-insecure-requests; default-src https://*.zoom.us https://zoom.us blob: 'self'; img-src https: about: blob: data: 'self'; style-src https: safari-extension: chrome-extension: 'unsafe-inline' data: 'self'; font-src https: safari-extension: chrome-extension: blob: data: 'self'; connect-src * about: blob: data: 'self'; media-src * rtmp: blob: data: 'self'; frame-src https: ms-appx-web: zoommtg: zoomus: wvjbscheme: zoomprc: data: blob: 'self'; object-src 'none'; base-uri 'none';
+x-frame-options: SAMEORIGIN
+Set-Cookie: _zm_feature=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Secure; HttpOnly
+x-zm-zoneid: VA
+strict-transport-security: max-age=31536000; includeSubDomains
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+vary: accept-encoding
+cf-cache-status: DYNAMIC
+Set-Cookie: zm_aid=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: zm_haid=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: zm_tmaid=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: zm_htmaid=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: cred=E3820F8245E3ED94E54CD4EAB7D98EE5; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_page_auth=us06_c_yFrKEm-KSNeouD0TGqaBqQ; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_ssid=us06_c_Q1bPsarVSxSP-yr2UuNo3A; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_ctaid=O7H_BgGrR5aIj41l-OKcvQ.1764870613960.19a326a3ff2037b3357348b2adee3219; Max-Age=7200; Expires=Thu, 04 Dec 2025 19:50:13 GMT; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_chtaid=972; Max-Age=7200; Expires=Thu, 04 Dec 2025 19:50:13 GMT; Domain=zoom.us; Path=/; Secure; HttpOnly
+Set-Cookie: _zm_mtk_guid=fe7336f4cd9543a1b3ac44ad2e051188; Max-Age=63072000; Expires=Sat, 04 Dec 2027 17:50:13 GMT; Domain=zoom.us; Path=/; Secure
+Set-Cookie: __cf_bm=oBBSbbxKZDBrrUKOGh6All3Khk.rqmzs5VOXlpUmzRo-1764870614-1.0.1.1-09Q2LCL16EMd6yfOiNf_KMHLTrSl_XSK67TqsKXlwpGWLNU2ZcYdJhPPed3azuhIc88CLw8c52hIyNWu4zNFRfiPIUc1.UvxWk8FwqyW_MM; path=/; expires=Thu, 04-Dec-25 18:20:14 GMT; domain=.us06web.zoom.us; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 9a8d2518bc417c51-PMO
+alt-svc: h3=":443"; ma=86400
+
+
+[16732:13876:2025-12-4 19:50:14.56] [process_requst] End for url:https://us06web.zoom.us/conf/launch, return code:200, Error:0, Response content size:2138
+[16732:14476:2025-12-4 19:50:14.114] [client_has_installed_app] found path:
+[16732:14476:2025-12-4 19:50:14.114]  ***NULL-POINTER-PLACEHOLDER***
+[16732:14476:2025-12-4 19:50:14.114] [param_query_local_path] path is: C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\ dir create response : 1 system error: 1008
+[16732:14476:2025-12-4 19:50:14.114] [downloader_run] State:0
+[16732:6940:2025-12-4 19:50:14.115] [process_requst] start, url:https://us06web.zoom.us/client/latest/Installer.exe?archType=x64
+[16732:14476:2025-12-4 19:50:14.115] [client_has_installed_app] found path:
+[16732:14476:2025-12-4 19:50:14.115]  ***NULL-POINTER-PLACEHOLDER***
+[16732:6940:2025-12-4 19:50:14.890] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[16732:6940:2025-12-4 19:50:14.890] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[16732:6940:2025-12-4 19:50:15.855] [read_response_file] Status Code:200, content length: 1148344, total read: 1148344, error code: 0
+[16732:6940:2025-12-4 19:50:15.860] [process_requst] End for url:https://us06web.zoom.us/client/latest/Installer.exe?archType=x64, return code:200, Error:0, Response content size:0
+[16732:14476:2025-12-4 19:50:15.920] [handle_download_job_done] Index: 1 Curr index: 1 StatusCode: 200 Error: 0 Response is Empty. 
+[16732:6940:2025-12-4 19:50:15.960] [process_requst] start, url:https://us06web.zoom.us/client/latest/Zoom.msi?archType=x64
+[16732:6940:2025-12-4 19:50:16.267] [req_state_read_status_code] zHttpQueryInfo complete, status:200
+[16732:6940:2025-12-4 19:50:16.267] [req_state_read_status_code] zHttpQueryInfo complete, status:200 Error: 0
+[16732:6940:2025-12-4 19:51:13.756] [read_response_file] Status Code:200, content length: 43744870, total read: 43744870, error code: 0
+[16732:6940:2025-12-4 19:51:13.764] [process_requst] End for url:https://us06web.zoom.us/client/latest/Zoom.msi?archType=x64, return code:200, Error:0, Response content size:0
+[16732:14476:2025-12-4 19:51:13.768] [handle_download_job_done] Index: 3 Curr index: 3 StatusCode: 200 Error: 0 Response is Empty. 
+[16732:14476:2025-12-4 19:51:13.799] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:51:13.799] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:51:14.541] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:51:19.589] [installer_notify_error] error: 10016
+[16732:14476:2025-12-4 19:51:23.52] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:51:23.52] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:51:23.68] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:51:24.796] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:51:24.796] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:51:24.812] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:51:26.661] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:51:26.661] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:51:26.676] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:51:28.17] [installer_notify_error] error: 10016
+[16732:14476:2025-12-4 19:53:53.255] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:53:53.255] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:53:53.270] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:53:54.596] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:53:54.596] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:53:54.611] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:53:55.229] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:53:55.229] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:53:55.244] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:53:58.378] [installer_notify_error] error: 10016
+[16732:14476:2025-12-4 19:54:13.736] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:54:13.736] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:54:13.752] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:54:18.263] [installer_notify_error] error: 10016
+[16732:14476:2025-12-4 19:57:53.703] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:57:53.703] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:57:53.719] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:57:54.459] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:57:54.459] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:57:54.474] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:57:55.662] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:57:55.662] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:57:55.709] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:57:57.519] C:\Users\pc123\AppData\Roaming\Zoom\ZoomDownload\Installer.exe
+[16732:14476:2025-12-4 19:57:57.519] ZInstaller --conf.mode=silent --ipc_wnd=1248560
+[16732:14476:2025-12-4 19:57:57.534] [launch_silent_install] Installer process created, result:42
+[16732:14476:2025-12-4 19:57:58.746] [installer_notify_error] error: 10016
+[16732:14476:2025-12-4 19:57:59.610] Main End

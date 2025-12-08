@@ -76,8 +76,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="{{route('welcome')}}" class="nav-item nav-link active">{{_('Home')}}</a>
-                        <a href="{{route('about')}}" class="nav-item nav-link">{_('About')}</a>
-                        {{-- <a href="{{route('gallery')}}" class="nav-item nav-link">{{_('Gallery')}</a> --}}
+                        <a href="{{route('about')}}" class="nav-item nav-link">{{_('About')}}</a>
+                        <a href="{{route('maingallery')}}" class="nav-item nav-link">{{_('Gallery')}}</a>
                         <a href="services.html" class="nav-item nav-link">Services</a>
                         <a href="packages.html" class="nav-item nav-link">Packages</a>
                         <a href="blog.html" class="nav-item nav-link">Blog</a>
@@ -93,7 +93,7 @@
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
                 </div>

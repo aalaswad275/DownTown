@@ -37,7 +37,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 
 Route::get('/about',[App\Http\Controllers\GenralController::class, 'about'])->name('about');
 Route::get('/contact',[App\Http\Controllers\GenralController::class, 'contact'])->name('contact');
-Route::get('/gallery',[App\Http\Controllers\GenralController::class, 'gallery'])->name('gallery');
+Route::get('/maingallery',[App\Http\Controllers\GenralController::class, 'gallery'])->name('maingallery');
 Route::get('/service',[App\Http\Controllers\GenralController::class, 'service'])->name('service');
 
 

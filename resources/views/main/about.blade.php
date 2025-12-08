@@ -55,6 +55,7 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
         </div>
         <!-- About End -->
 
+
         <!-- Travel Guide Start -->
         <div class="container-fluid guide py-5">
             <div class="container py-5">
@@ -80,7 +81,7 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                                 <div class="guide-title-inner">
                                     <h4 class="mt-3">{{_('Eng. Fatima-Alzahraa Mohamed ')}}</h4>
                                     <p class="mb-0">{{_('Backend Developer')}}</p>
-                                </div
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,14 +121,12 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                   <h4 class="mt-3">{{_('Eng. Jomana hussin')}}</h4>
+                                    <h4 class="mt-3">{{_('Eng. Jomana hussin')}}</h4>
                                     <p class="mb-0">{{_('Backend Developer')}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        </div>
-                        <div class="row">
                     <div class="col-md-6 col-lg-3">
                         <div class="guide-item">
                             <div class="guide-img">
@@ -149,7 +148,7 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="guide-item">
                             <div class="guide-img">
                                 <div class="guide-img-efects">
@@ -170,7 +169,7 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="guide-item">
                             <div class="guide-img">
                                 <div class="guide-img-efects">
@@ -187,7 +186,7 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                                 <div class="guide-title-inner">
                                     <h4 class="mt-3">{{_('Eng. Nosiba Ismael  ')}}</h4>
                                     <p class="mb-0">{{_('Frontend Developer')}}</p>
-                                </div>u
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -195,5 +194,6 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
             </div>
         </div>
         <!-- Travel Guide End -->
+
 @endsection
 

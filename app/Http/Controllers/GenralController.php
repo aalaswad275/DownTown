@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Slider;
-
+use App\Models\Gallery;
+use App\Models\Landmarks;
+use App\Models\Store;
 use Illuminate\Http\Request;
 
 class GenralController extends Controller
@@ -22,11 +24,21 @@ class GenralController extends Controller
     return view('main.contact');
    }
    public function gallery(){
-    return view('main.gallery');
+    $gallery = Gallery::Where('active','1')->get();
+    return view('main.gallery',compact('gallery'));
    }
 
    public function service(){
     return view('main.service');
    }
+   public function store(){
+    $store = Store::Where('active','1')->get();
+    return view('main.store',compact('store'));
+   }
+
+    public function landmarks(){
+     $landmarks = Landmarks::Where('active','1')->get();
+     return view('main.destinstion',compact('landmarks'));
+    }
 
 }
