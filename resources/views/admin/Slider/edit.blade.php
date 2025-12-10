@@ -11,35 +11,35 @@
                 // خاص بتحميل الصور
                 // البيانات الخاص بالصوره
                 <div class="mb-3"> // عنوان الصورة
-                    <label for="title ">{{_('Please Enter title')}}</label>
+                    <label for="title ">{{__('Please Enter title')}}</label>
                     <input type="text" id="title" name='slider_title' value="{{$slider->title}}" required >
 
                 </div>
 
                 <div class="mb-3">// عنوان فراعي
-                    <label for="subtitle">{{_('Please enter subtitle')}}</label>
+                    <label for="subtitle">{{__('Please enter subtitle')}}</label>
                     <input type="text" id="subtitle" name='image_subtitle' value="{{$slider->subtitle}}">
                 </div>
                 <div class="mb-3">
-                    <label for="Description">{{_('Pleasse enter description')}}</label>
+                    <label for="Description">{{__('Pleasse enter description')}}</label>
                     <textarea name="image_disc" id="Description" cols="30" rows="10" required> {{$slider->description}}</textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="link">{{_('please enter link ')}}</label>
+                    <label for="link">{{__('please enter link ')}}</label>
                     <input type="text" name="image_link" id="link" value="{{$slider->link}}">
                 </div>
                 <div class="mb-3">
-                    <label for="active">{{_('Is it to display')}}</label>
+                    <label for="active">{{__('Is it to display')}}</label>
                     <input type="checkbox" id='active' name="is_active" value="{{$slider->active}}">
                 </div>
                 <div class="mb-3">
                     <div class="image">
                         <img src="{{asset('frontend/img/'.$slider->image)}}"   height="120px" width="120px" alt="" srcset="">
                     </div>
-                    <label for="image">{{_('upload image')}}</label>
+                    <label for="image">{{__('upload image')}}</label>
                     <input type="file" name="slider_image"  id="image" required>
                 </div>
-                <button type="submit" class="btn btn-success">{{_('submit')}}</button>
+                <button type="submit" class="btn btn-success">{{__('submit')}}</button>
 
             </form>
         </div>

@@ -131,51 +131,51 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li class="nav-item active">
-                  <a class="nav-link pl-3" href="{{route('landmarks.index')}}"><span class="ml-1 item-text">{{_('list of added landmarks')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('landmarks.index')}}"><span class="ml-1 item-text">{{__('list of added landmarks')}}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('landmarks.create')}}"><span class="ml-1 item-text">{{_('add landmark')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('landmarks.create')}}"><span class="ml-1 item-text">{{__('add landmark')}}</span></a>
                 </li>
 
               </ul>
             </li>
           </ul>
           <p class="text-muted nav-heading mt-4 mb-1">
-            <span>{{_('Main Page ')}}</span>
+            <span>{{__('Main Page ')}}</span>
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#ui-elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                 <i class="fe fe-box fe-16"></i>
-                <span class="ml-3 item-text">{{_('Sliders')}}</span>
+                <span class="ml-3 item-text">{{__('Sliders')}}</span>
               </a>
-              <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
+
+            </li>
+<ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('sliders.index')}}"><span class="ml-1 item-text">{{_('list of added sliders')}} </span>
+                  <a class="nav-link pl-3" href="{{route('sliders.index')}}"><span class="ml-1 item-text">{{__('list of added sliders')}} </span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('sliders.create')}}"><span class="ml-1 item-text">{{_('add slider')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('sliders.create')}}"><span class="ml-1 item-text">{{__('add slider')}}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('gallery.index')}}"><span class="ml-1 item-text">{{_('list of Images')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('gallery.index')}}"><span class="ml-1 item-text">{{__('list of Images')}}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('gallery.create')}}"><span class="ml-1 item-text">{{_('add Image')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('gallery.create')}}"><span class="ml-1 item-text">{{__('add Image')}}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('stores.index')}}"><span class="ml-1 item-text">{{_('list of added stores')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('stores.index')}}"><span class="ml-1 item-text">{{__('list of added stores')}}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('stores.create')}}"><span class="ml-1 item-text">{{_('add store')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('stores.create')}}"><span class="ml-1 item-text">{{__('add store')}}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{route('comment.index')}}"><span class="ml-1 item-text">{{_('list of added comments')}}</span></a>
+                  <a class="nav-link pl-3" href="{{route('comment.index')}}"><span class="ml-1 item-text">{{__('list of added comments')}}</span></a>
                 </li>
 
               </ul>
-            </li>
-
           </ul>
 
 

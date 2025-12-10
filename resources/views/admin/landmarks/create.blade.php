@@ -1,86 +1,86 @@
 @extends('layout.backapp')
 @section('content')
 <div class="container py-4">
-    <h3>{{_('Add New Landmark')}}</h3>
+    <h3>{{__('Add New Landmark')}}</h3>
     <form action="{{route('landmarks.store')}}" method="post" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">
-            <label for="landmarkname"> {{_('enter lanadmark')}}</label>
+            <label for="landmarkname"> {{__('enter lanadmark')}}</label>
             <input type="text" name="name" id="landmarkname" class="form-control" value="{{old('name')}}" required>
 
         </div>
         <div class="mb-3">
-            <label for="Descrpition"> {{_('enter Descrpition')}}</label>
+            <label for="Descrpition"> {{__('enter Descrpition')}}</label>
             <textarea name="description" id="Descrpition" class="form-control"> {{old('description')}}</textarea>
         </div>
         <div class="mb-3">
-            <label for="address"> {{_('enter address')}}</label>
+            <label for="address"> {{__('enter address')}}</label>
             <input type="text" name="address" id="address" class="form-control" value="{{old('address')}}" >
         </div>
         <div class="mb-3">
-            <label for="city"> {{_('choose city')}}</label>
+            <label for="city"> {{__('choose city')}}</label>
             <select name="city_id" id="city">
-                <option value=""> {{_('Select City')}}</option>
+                <option value=""> {{__('Select City')}}</option>
                 @foreach ($cities as $city)
                 <option value="{{$city->id}}">{{$city->name}}</option>
                 @endforeach
             </select>
         </div>
         <div class="mb-3">
-            <label for="Category"> {{_('choose category')}}</label>
+            <label for="Category"> {{__('choose category')}}</label>
             <select name="category" id="Category">
-                <option value=""> {{_('Select Category')}}</option>
+                <option value=""> {{__('Select Category')}}</option>
                 @foreach ($catgories as $cat)
                 <option value="{{$cat->id}}">{{$cat->name}}</option>
                 @endforeach
             </select>
         </div>
         <div class="mb-3">
-            <label for="Tags"> {{_('enter tags')}}</label>
+            <label for="Tags"> {{__('enter tags')}}</label>
             <input type="text" name="tags" id="Tags" class="form-control" value="{{old('tags')}}"  placeholder="museum,tourism">
         </div>
         <div class="mb-3">
-            <label for="website"> {{_('enter website')}}</label>
+            <label for="website"> {{__('enter website')}}</label>
             <input type="url" name="website" id="website" class="form-control" value="{{old('website')}}" >
         </div>
         <div class="mb-3">
-            <label for="Openhours"> {{_('enter opening Hours')}}</label>
+            <label for="Openhours"> {{__('enter opening Hours')}}</label>
             <input type="text" name="opening_hours" id="Openhours" class="form-control" value="{{old('opening_hours')}}" placeholder='{ "Mon":"9:6"}' >
         </div>
         <div class="mb-3">
-            <label for="Ratings"> {{_('enter Rating')}}</label>
+            <label for="Ratings"> {{__('enter Rating')}}</label>
             <input type="number" name="rating" id="Ratings" class="form-control" min="0" max="5" step="0.1" value="{{old('rating')}}" >
         </div>
         <div class="mb-3">
-            <label for="mainimage"> {{_('upload Image')}}</label>
+            <label for="mainimage"> {{__('upload Image')}}</label>
             <input type="file" name="image" id="mainimage" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="gallery"> {{_('enter address')}}</label>
+            <label for="gallery"> {{__('enter address')}}</label>
             <input type="file" name="gallery[]" id="gallery" class="form-control" multiple >
         </div>
         <div class="row">
             <div class=" col-md-6 mb-3">
-            <label for="Latitude"> {{_('Latitude')}}</label>
+            <label for="Latitude"> {{__('Latitude')}}</label>
             {{-- الانه القيمه من الخريطه --}}
             <input type="text" name="latitude" id="Latitude" class="form-control" readonly >
             </div>
             <div class=" col-md-6 mb-3">
-            <label for="Longitude"> {{_('Longitude')}}</label>
+            <label for="Longitude"> {{__('Longitude')}}</label>
             {{-- الانه القيمه من الخريطه --}}
             <input type="text" name="longitude" id="Longitude" class="form-control" readonly >
             </div>
         </div>
         <div class="mb-3">
-            <label class="form-label">  {{_('select Location on map')}}</label>
+            <label class="form-label">  {{__('select Location on map')}}</label>
             <div id="map" style="height: 400px;"></div>
         </div>
         <div class="form-check mb-3">
             <input type="checkbox" name="is_active" class="form-check-input" checked>
             <label  class="form-check-label"></label>
         </div>
-        <button type="submit" class="btn btn-primary"> {{_('add landmark')}}</button>
+        <button type="submit" class="btn btn-primary"> {{__('add landmark')}}</button>
     </form>
 </div>
 <script>

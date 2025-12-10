@@ -3,11 +3,11 @@
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4">{{_('Famous Places')}}</h1>
+                <h3 class="text-white display-3 mb-4">{{__('Famous Places')}}</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{_('Home')}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{__('Home')}}</a></li>
 
-                    <li class="breadcrumb-item active text-white">{{_('Famous Places')}}</li>
+                    <li class="breadcrumb-item active text-white">{{__('Famous Places')}}</li>
                 </ol>
             </div>
         </div>
@@ -17,8 +17,8 @@
         <div class="container-fluid blog py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">{{_('Places You must visit')}}</h5>
-                    <h1 class="mb-4">{{_('Libya Like you have never seen before')}}</h1>
+                    <h5 class="section-title px-3">{{__('Places You must visit')}}</h5>
+                    <h1 class="mb-4">{{__('Libya Like you have never seen before')}}</h1>
                     <p class="mb-0"> </p>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -42,7 +42,7 @@
                                 <p class="mb-3">{{$landmark->tags}} </p>
                                 <a href="#" class="h4">{{$landmark->title}}</a>
                                 <p class="my-3">{!!subStr($landmark->description, 0, 100)!!}...</p>
-                                <a href="{{route('landmark.view',$landmark->id)}}" class="btn btn-primary rounded-pill py-2 px-4">{{_('Read More')}}</a>
+                                <a href="{{route('landmark.view',$landmark->id)}}" class="btn btn-primary rounded-pill py-2 px-4">{{__('Read More')}}</a>
                             </div>
                         </div>
                     </div>

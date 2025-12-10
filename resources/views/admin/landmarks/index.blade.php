@@ -7,10 +7,10 @@
     <div class="row">
         <div class="align-items-center">
             <h2 class="fw-bold">
-                {{_('Libyan landmarks List ')}}
+                {{__('Libyan landmarks List ')}}
             </h2>
             <a href="{{route('landmarks.create')}}"  class="btn btn-lg btn-primary">
-                {{_(' New Landmark')}}
+                {{__(' New Landmark')}}
             </a>
         </div>
     </div>
@@ -22,13 +22,13 @@
                 <thead>
                     <tr>
                         <th> # </th>
-                        <th> {{_('image')}}</th>
-                        <th> {{_('name')}}</th>
-                        <th> {{_('city')}}</th>
-                        <th> {{_('category')}}</th>
-                        <th> {{_('active')}}</th>
-                        <th> {{_('Created at')}}</th>
-                        <th> {{_('Action')}}</th>
+                        <th> {{__('image')}}</th>
+                        <th> {{__('name')}}</th>
+                        <th> {{__('city')}}</th>
+                        <th> {{__('category')}}</th>
+                        <th> {{__('active')}}</th>
+                        <th> {{__('Created at')}}</th>
+                        <th> {{__('Action')}}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +39,7 @@
                         <td> <a href="{{route('landmarks.show',$landmark->id)}}"><img src="{{asset('frontend/img/landmarks/'.$landmark->image)}}"
                             height="60px"  width="60px"></a></td>
                         @else
-                        <td> {{_('No  Image Upload')}}</td>
+                        <td> {{__('No  Image Upload')}}</td>
                         @endif
 
                         <td>
@@ -61,9 +61,9 @@
                         </td>
                         <td>
                             @if($landmark->active==1)
-                            <span class="badge badge-pill badge-success">{{_('active')}}</span>
+                            <span class="badge badge-pill badge-success">{{__('active')}}</span>
                             @else
-                            <span class="badge badge-danger">{{_('not active')}}</span>
+                            <span class="badge badge-danger">{{__('not active')}}</span>
                             @endif
                         </td>
                         <td> {{$landmark->created_at->format('Y-m-d')}}</td>

@@ -3,11 +3,11 @@
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4">{{_('Our Gallery')}}</h1>
+                <h3 class="text-white display-3 mb-4">{{__('Our Gallery')}}</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{_('home')}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{__('home')}}</a></li>
 
-                    <li class="breadcrumb-item active text-white">{{_('Gallery')}}</li>
+                    <li class="breadcrumb-item active text-white">{{__('Gallery')}}</li>
                 </ol>
             </div>
         </div>
@@ -16,9 +16,9 @@
         <!-- Gallery Start -->
         <div class="container-fluid gallery py-5 my-5">
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">{{_('Our Gallery')}}</h5>
-                <h1 class="mb-4">{{_('Tourism & Traveling Gallery.')}}</h1>
-                <p class="mb-0">{{_('Discover breathtaking destinations, vibrant cultures,
+                <h5 class="section-title px-3">{{__('Our Gallery')}}</h5>
+                <h1 class="mb-4">{{__('Tourism & Traveling Gallery.')}}</h1>
+                <p class="mb-0">{{__('Discover breathtaking destinations, vibrant cultures,
                  and unforgettable experiences through our curated collection of travel photography. Each image tells a story of adventure, exploration, and the beauty of our world, inspiring you to embark on your own journey.')}}
                 </p>
             </div>
@@ -71,7 +71,7 @@
                             @endforeach
                         </div>
                     </div>
-                  
+
                 </div>
             </div>
         </div>

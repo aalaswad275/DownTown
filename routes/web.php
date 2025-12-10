@@ -30,10 +30,19 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 // routes/web.php
 
+Route::group(
+[
+	'prefix' => LaravelLocalization::setLocale(),
+	'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+], function(){ //...
+
+   Route::get('/',[App\Http\Controllers\GenralController::class, 'Slider'])->name('welcome');
+
+});
+
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
 	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    Route::get('/',[App\Http\Controllers\GenralController::class, 'Slider'])->name('welcome');
 
 Route::get('/about',[App\Http\Controllers\GenralController::class, 'about'])->name('about');
 Route::get('/contact',[App\Http\Controllers\GenralController::class, 'contact'])->name('contact');

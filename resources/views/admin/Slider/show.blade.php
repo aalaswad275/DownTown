@@ -4,7 +4,7 @@
 <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-12">
-              <h2 class="h3 mb-4 page-title"> {{_('Front page slider')}}</h2>
+              <h2 class="h3 mb-4 page-title"> {{__('Front page slider')}}</h2>
               <div class="row mt-5 align-items-center">
                 <div class="col-md-3 text-center mb-5">
                   <div class="avatar avatar-xl">
@@ -23,7 +23,7 @@
                       <p class=" ">{{$slider->description}} </p>
                     </div>
                     <div class="col">
-                      <p class="small mb-0 "> {{_('image status')}} : <span class="badge @if($slider->active==1 ) badge-seccuss  @else badge-danager @endif"> {{_('status')}} </span></p>
+                      <p class="small mb-0 "> {{__('image status')}} : <span class="badge @if($slider->active==1 ) badge-seccuss  @else badge-danager @endif"> {{__('status')}} </span></p>
                       <p class="small mb-0 text-muted">P.O. Box 464, 5975 Eget Avenue</p>
                       <p class="small mb-0 text-muted">(537) 315-1481</p>
                     </div>

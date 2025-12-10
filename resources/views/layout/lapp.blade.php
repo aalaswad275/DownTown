@@ -33,6 +33,7 @@
 
         <!-- Topbar Start -->
         <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+
             <div class="row gx-0">
                 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -57,6 +58,15 @@
                                 <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
                             </div>
                         </div>
+                            <ul>
+    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <li>
+            <a class="me-3 text-light"rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        </li>
+    @endforeach
+</ul>
                     </div>
                 </div>
             </div>
@@ -75,9 +85,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="{{route('welcome')}}" class="nav-item nav-link active">{{_('Home')}}</a>
-                        <a href="{{route('about')}}" class="nav-item nav-link">{{_('About')}}</a>
-                        <a href="{{route('maingallery')}}" class="nav-item nav-link">{{_('Gallery')}}</a>
+                        <a href="{{route('welcome')}}" class="nav-item nav-link active">{{__('Home')}}</a>
+                        <a href="{{route('about')}}" class="nav-item nav-link">{{__('About')}}</a>
+                        <a href="{{route('maingallery')}}" class="nav-item nav-link">{{__('Gallery')}}</a>
                         <a href="services.html" class="nav-item nav-link">Services</a>
                         <a href="packages.html" class="nav-item nav-link">Packages</a>
                         <a href="blog.html" class="nav-item nav-link">Blog</a>

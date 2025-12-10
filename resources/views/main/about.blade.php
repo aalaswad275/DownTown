@@ -5,8 +5,8 @@
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h3 class="text-white display-3 mb-4">About Us</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{_('home')}}</a></li>
-                    <li class="breadcrumb-item active text-white">{{_('about')}}</li>
+                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{__('home')}}</a></li>
+                    <li class="breadcrumb-item active text-white">{{__('about')}}</li>
                 </ol>
             </div>
         </div>
@@ -22,11 +22,11 @@
                         </div>
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
-                        <h5 class="section-about-title pe-3">{{_('about us')}}</h5>
-                        <h1 class="mb-4">Welcome to <span class="text-primary">{{_('Libya')}}</span></h1>
-                        <p class="mb-4">{{_('Welcome to our Libyan Tourism Platform — your gateway to discovering the beauty, history, and culture of Libya.
+                        <h5 class="section-about-title pe-3">{{__('about us')}}</h5>
+                        <h1 class="mb-4">Welcome to <span class="text-primary">{{__('Libya')}}</span></h1>
+                        <p class="mb-4">{{__('Welcome to our Libyan Tourism Platform — your gateway to discovering the beauty, history, and culture of Libya.
 We provide travelers, researchers, and locals with reliable information about Libya’s most stunning destinations, from ancient archaeological sites and Mediterranean beaches to desert adventures and cultural experiences.')}}</p>
-                        <p class="mb-4">{{_('Our mission is to promote Libyan tourism by offering up-to-date guides, practical travel tips, and a rich showcase of what makes Libya unique.
+                        <p class="mb-4">{{__('Our mission is to promote Libyan tourism by offering up-to-date guides, practical travel tips, and a rich showcase of what makes Libya unique.
 We aim to support local tourism initiatives, highlight hidden gems, and connect visitors with trusted services that make every journey safe and memorable.')}}</p>
                         <div class="row gy-2 gx-4 mb-4">
                             <div class="col-sm-6">
@@ -60,8 +60,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
         <div class="container-fluid guide py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">{{_('Meet Our Team')}}</h5>
-                    <h1 class="mb-0">{{_('First class web developers')}}</h1>
+                    <h5 class="section-title px-3">{{__('Meet Our Team')}}</h5>
+                    <h1 class="mb-0">{{__('First class web developers')}}</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
@@ -79,8 +79,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">{{_('Eng. Fatima-Alzahraa Mohamed ')}}</h4>
-                                    <p class="mb-0">{{_('Backend Developer')}}</p>
+                                    <h4 class="mt-3">{{__('Eng. Fatima-Alzahraa Mohamed ')}}</h4>
+                                    <p class="mb-0">{{__('Backend Developer')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -100,8 +100,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">{{_('Eng. Emtenan Abdulmajeed')}}</h4>
-                                    <p class="mb-0">{{_('Backend Developer')}}</p>
+                                    <h4 class="mt-3">{{__('Eng. Emtenan Abdulmajeed')}}</h4>
+                                    <p class="mb-0">{{__('Backend Developer')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -121,8 +121,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">{{_('Eng. Jomana hussin')}}</h4>
-                                    <p class="mb-0">{{_('Backend Developer')}}</p>
+                                    <h4 class="mt-3">{{__('Eng. Jomana hussin')}}</h4>
+                                    <p class="mb-0">{{__('Backend Developer')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -142,8 +142,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">{{_('Eng. Malak Saleh ')}}</h4>
-                                    <p class="mb-0">{{_('Frontend Developer')}}</p>
+                                    <h4 class="mt-3">{{__('Eng. Malak Saleh ')}}</h4>
+                                    <p class="mb-0">{{__('Frontend Developer')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -163,8 +163,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">{{_('Eng. Saja Mohammed ')}}</h4>
-                                    <p class="mb-0">{{_('Frontend Developer')}}</p>
+                                    <h4 class="mt-3">{{__('Eng. Saja Mohammed ')}}</h4>
+                                    <p class="mb-0">{{__('Frontend Developer')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -184,8 +184,8 @@ We aim to support local tourism initiatives, highlight hidden gems, and connect 
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">{{_('Eng. Nosiba Ismael  ')}}</h4>
-                                    <p class="mb-0">{{_('Frontend Developer')}}</p>
+                                    <h4 class="mt-3">{{__('Eng. Nosiba Ismael  ')}}</h4>
+                                    <p class="mb-0">{{__('Frontend Developer')}}</p>
                                 </div>
                             </div>
                         </div>

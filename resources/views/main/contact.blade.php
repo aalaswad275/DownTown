@@ -5,9 +5,9 @@
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h3 class="text-white display-3 mb-4">Contact Us</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{_('Home')}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('welcome')}}">{{__('Home')}}</a></li>
 
-                    <li class="breadcrumb-item active text-white">{{_('Contact')}}</li>
+                    <li class="breadcrumb-item active text-white">{{__('Contact')}}</li>
                 </ol>
             </div>
         </div>
