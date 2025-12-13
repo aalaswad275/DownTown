@@ -45,9 +45,68 @@
             <input type="url" name="website" id="website" class="form-control" value="{{old('website')}}" >
         </div>
         <div class="mb-3">
-            <label for="Openhours"> {{__('enter opening Hours')}}</label>
-            <input type="text" name="opening_hours" id="Openhours" class="form-control" value="{{old('opening_hours')}}" placeholder='{ "Mon":"9:6"}' >
+    <label class="form-label">{{ __('opening hours') }}</label>
+
+    <div class="border p-3 rounded bg-light">
+
+        @php
+            $days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+        @endphp
+
+        @foreach($days as $day)
+        <div class="row mb-2 align-items-center">
+
+            <div class="col-md-2">
+                <strong>{{ __($day) }}</strong>
+            </div>
+
+            <div class="col-md-3">
+                <input type="time" class="form-control opening-time" data-day="{{ $day }}">
+            </div>
+
+            <div class="col-md-3">
+                <input type="time" class="form-control closing-time" data-day="{{ $day }}">
+            </div>
+
+            <div class="col-md-2 text-center">
+                <input type="checkbox" class="form-check-input closed-checkbox" data-day="{{ $day }}">
+                {{ __('Closed') }}
+            </div>
+
         </div>
+        @endforeach
+
+        <input type="hidden" name="opening_hours" id="openingHoursJSON">
+
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    function updateJSON() {
+        let data = {};
+
+        document.querySelectorAll(".opening-time").forEach(input => {
+            let day = input.dataset.day;
+            let open = input.value;
+            let close = document.querySelector('.closing-time[data-day="'+day+'"]').value;
+            let closed = document.querySelector('.closed-checkbox[data-day="'+day+'"]').checked;
+
+            if (closed) {
+                data[day] = "Closed";
+            } else if (open && close) {
+                data[day] = open + "-" + close;
+            }
+        });
+
+        document.getElementById("openingHoursJSON").value = JSON.stringify(data);
+    }
+
+    document.querySelectorAll(".opening-time, .closing-time, .closed-checkbox")
+        .forEach(el => el.addEventListener("change", updateJSON));
+});
+</script>
+
         <div class="mb-3">
             <label for="Ratings"> {{__('enter Rating')}}</label>
             <input type="number" name="rating" id="Ratings" class="form-control" min="0" max="5" step="0.1" value="{{old('rating')}}" >

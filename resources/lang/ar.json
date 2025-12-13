@@ -904,6 +904,56 @@
         "Advanced Search":" البحث المتقدم ",
       "Libya Land is a digital gateway designed to showcase the hidden beauty, rich culture, and timeless heritage of Libya. Our mission is to present Libya as a welcoming and captivating destination for travelers, explorers, and history enthusiasts from around the world.":"Libya Land هو بوابتك الرقمية لاكتشاف الجمال الخفي، والثقافة الغنية، والتراث العريق لليبيا. نسعى إلى تقديم ليبيا كوجهة ترحب بالمسافرين والمستكشفين وهواة التاريخ من جميع أنحاء العالم.",
     "Type of issue":"نوع العدد",
- "AboutLibyaLand":"Libya Land هو بوابتك الرقمية لاكتشاف الجمال الخفي، والثقافة الغنية، والتراث العريق لليبيا. نسعى إلى تقديم ليبيا كوجهة ترحب بالمسافرين والمستكشفين وهواة التاريخ من جميع أنحاء العالم."
+ "AboutLibyaLand":"Libya Land هو بوابتك الرقمية لاكتشاف الجمال الخفي، والثقافة الغنية، والتراث العريق لليبيا. نسعى إلى تقديم ليبيا كوجهة ترحب بالمسافرين والمستكشفين وهواة التاريخ من جميع أنحاء العالم.",
+ "About":" من نحن",
+ "Gallery":"معرض الصور",
+ "Contact":"تواصل معنا",
+ "Landmarks":"معالم",
+ "Add Landmark":"أضافة معالم جديد",
+ "About Us": "من نحن",
+    "Welcome to": "مرحباً بكم في",
+    "Libya Land": "ليبيا لاند",
+
+    "Libya Land is a digital gateway designed to showcase the hidden beauty, rich culture, and timeless heritage of Libya. Our mission is to present Libya as a welcoming and captivating destination for travelers, explorers, and history enthusiasts from around the world.":
+    "ليبيا لاند هي بوابة رقمية مصممة لعرض الجمال المخفي، والثقافة الغنية، والتراث العريق لليبيا. مهمتنا هي تقديم ليبيا كوجهة مرحّبة وجذابة للمسافرين، والمستكشفين، وعشاق التاريخ من جميع أنحاء العالم.",
+
+    "We believe that Libya is more than just a place on the map — it is a land of breathtaking deserts, stunning Mediterranean beaches, ancient Roman and Greek ruins, vibrant traditions, and warm hospitality. Through our platform, we aim to highlight the country’s natural wonders, historical treasures, local cuisine, and unique cultural experiences.":
+    "نؤمن بأن ليبيا ليست مجرد مكان على الخريطة — بل هي أرض الصحاري الخلابة، والشواطئ المتوسطية الساحرة، والآثار الرومانية واليونانية القديمة، والتقاليد النابضة بالحياة، والضيافة الدافئة. من خلال منصتنا، نسعى إلى إبراز عجائب البلاد الطبيعية، وكنوزها التاريخية، ومطبخها المحلي، وتجاربها الثقافية الفريدة.",
+
+    "Explore Famous Landmarks": "استكشف المعالم الشهيرة",
+    "Handpicked Hotels": "فنادق مختارة بعناية",
+    "Famous Historic Stores": "متاجر تاريخية شهيرة",
+    "Libyan Life Style ": "أسلوب الحياة الليبي",
+    "Moneuments": "المعالم الأثرية",
+    "24/7 Service": "خدمة 24/7",
+
+    "Read More": "اقرأ المزيد",
+        "Destination": "الوجهات",
+    "Libya Land Famuos Landmarks": "أشهر المعالم في ليبيا لاند",
+
+    "All": "الكل",
+    "Tripoli": "طرابلس",
+    "Gahida-mas": "القضامة",
+    "Sabratha": "صبراتة",
+    "Benghzi": "بنغازي",
+    "Ghaat": "غات",
+
+    "20 Photos": "20 صورة",
+    "View All Place": "عرض جميع الأماكن",
+    "Libyan landmarks List ": "قائمة المعالم الليبية",
+    "New Landmark": "إضافة معلم جديد",
+
+    "image": "الصورة",
+    "name": "الاسم",
+    "city": "المدينة",
+    "category": "الفئة",
+    "active": "فعال",
+    "not active": "غير فعال",
+    "Created at": "تاريخ الإضافة",
+    "Action": "إجراء",
+    "No  Image Upload": "لا توجد صورة مرفوعة",
+    "Are you sure you want to delete this landmark?":"هل أنت متأكد أنك تريد حذف هذا المعلم؟",
+    FETWR432
+
 
 }

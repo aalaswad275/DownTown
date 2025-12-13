@@ -62,8 +62,8 @@ class LandMarksController extends Controller
             $imagepath=$filename;
         }
         $gallery = [];
-        
-        
+
+
 
 if ($request->hasFile('gallery')) {
 
@@ -95,7 +95,7 @@ if ($request->hasFile('gallery')) {
         $landmark->description = $request->description;
         $landmark->slug = Str::slug($request->name).'-'.uniqid();
         $landmark->image = $imagepath;
-        $landmark->gallery = json_encode($gallery); //
+        $landmark->gallery = $gallery; //
         // $gallery;
         $landmark->address = $request->address;
         $landmark->city_id = $request->city_id;
