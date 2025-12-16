@@ -110,8 +110,9 @@
                             <div class="col-12">
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+                                        <h5 class="mb-4">{{ __('Famous Landmarks') }}</h5>
+                                        <p class="mb-0">
+                                            {{ __('Explore Libya’s most famous landmarks, including Roman ruins, Greek temples, desert cities, and UNESCO World Heritage sites.') }}
                                         </p>
                                     </div>
                                     <div class="service-icon p-4">
@@ -122,9 +123,11 @@
                             <div class="col-12">
                                 <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                       <h5 class="mb-4">{{ __('Historical City Guides') }}</h5>
+<p class="mb-0">
+    {{ __('Discover the rich history of Libyan cities through detailed guides that explore ancient civilizations, Islamic heritage, and cultural landmarks across the country.') }}
+</p>
+
                                     </div>
                                     <div class="service-icon p-4">
                                         <i class="fa fa-hotel fa-4x text-primary"></i>
@@ -134,9 +137,11 @@
                             <div class="col-12">
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                        <h5 class="mb-4">{{ __('Libyan Culture & Lifestyle') }}</h5>
+<p class="mb-0">
+    {{ __('Experience authentic Libyan culture, traditional clothing, local customs, music, festivals, and the unique lifestyle of Libyan communities.') }}
+</p>
+
                                     </div>
                                     <div class="service-icon p-4">
                                         <i class="fa fa-user fa-4x text-primary"></i>
@@ -146,9 +151,11 @@
                             <div class="col-12">
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                        <h5 class="mb-4">{{ __('Local Events & Heritage Activities') }}</h5>
+<p class="mb-0">
+    {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
+</p>
+
                                     </div>
                                     <div class="service-icon p-4">
                                         <i class="fa fa-cog fa-4x text-primary"></i>
@@ -165,9 +172,11 @@
                                         <i class="fa fa-globe fa-4x text-primary"></i>
                                     </div>
                                     <div class="service-content">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                        <h5 class="mb-4">{{ __('Local Events & Heritage Activities') }}</h5>
+<p class="mb-0">
+    {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
+</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -177,9 +186,11 @@
                                         <i class="fa fa-hotel fa-4x text-primary"></i>
                                     </div>
                                     <div class="service-content">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                       <h5 class="mb-4">{{ __('Travel Planning & Recommendations') }}</h5>
+<p class="mb-0">
+    {{ __('Get practical travel tips, recommended routes, best visiting times, and essential information for exploring Libya safely and comfortably.') }}
+</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -189,9 +200,10 @@
                                         <i class="fa fa-user fa-4x text-primary"></i>
                                     </div>
                                     <div class="service-content">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                        <h5 class="mb-4">{{ __('Educational & Research Resources') }}</h5>
+                                <p class="mb-0">
+                                    {{ __('Access reliable information, historical references, and educational resources for students, researchers, and history enthusiasts.') }}
+                                </p>
                                     </div>
                                 </div>
                             </div>
@@ -201,9 +213,10 @@
                                         <i class="fa fa-cog fa-4x text-primary"></i>
                                     </div>
                                     <div class="service-content">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
+                                        <h5 class="mb-4">{{ __('Traditional Libyan Cuisine') }}</h5>
+                                <p class="mb-0">
+                                    {{ __('Discover traditional Libyan dishes, local ingredients, and authentic flavors that reflect the country’s rich culinary heritage.') }}
+                                </p>
                                     </div>
                                 </div>
                             </div>
@@ -262,45 +275,35 @@
                     <div class="tab-content">
 
                         <div id="tab-1" class="tab-pane fade show p-0 active">
-                            @foreach($mainlandmark as $ml )
+
                             <div class="row g-4">
 
                                 <div class="col-xl-8">
                                     <div class="row g-4">
-                                        <div class="col-lg-6">
+                                        @foreach($mainlandmark as $ml )
+                                        <div class="col-md-4">
                                             <div class="destination-img">
-                                                <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks'. $ml->image)}}" alt="">
+                                                <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $ml->image)}}" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="{{route('PlacePhotos', $ml->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($ml->gallery)}} {{__('Photos')}}</a>
+                                                    <a href="{{route('PlacePhotos', $ml->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{ gettype($ml->gallery) }} {{__('Photos')}}</a>
                                                     <h4 class="text-white mb-2 mt-3">{{$ml->name}}</h4>
                                                     <a href="{{route('PlaceInfo',$ml->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
-                                                    <a href="{{asset('frontend/img/landmarks'. $ml->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
+                                                    <a href="{{asset('frontend/img/landmarks/'.$ml->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                                 </div>
                                             </div>
                                         </div>
+                                        @endforeach
                                     </div>
                                 </div>
 
-                                <div class="col-xl-4">
-                                    <div class="destination-img h-100">
-                                        <img class="img-fluid rounded w-100 h-100" src="img/destination-9.jpg" style="object-fit: cover; min-height: 300px;" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">San francisco</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-9.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                @endforeach
+
+
                             </div>
                         </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
+                        {{-- <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 @foreach($tripolilandmark as $tl )
                                 <div class="col-lg-6">
@@ -396,7 +399,7 @@
                                 </div>
                                 @endforeach
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -538,186 +541,107 @@
         </div>
         <!-- Gallery End -->
 
-        <!-- Tour Booking Start -->
-        <div class="container-fluid booking py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <h5 class="section-booking-title pe-3">Booking</h5>
-                        <h1 class="text-white mb-4">Online Booking</h1>
-                        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
-                        </p>
-                        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
-                        </p>
-                        <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="text-white mb-3">Book A Tour Deals</h1>
-                        <p class="text-white mb-4">Get <span class="text-warning">50% Off</span> On Your First Adventure Trip With Travela. Get More Deal Offers Here.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-white border-0" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-white border-0" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
-                                        </select>
-                                        <label for="select1">Destination</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="SelectPerson">
-                                            <option value="1">Persons 1</option>
-                                            <option value="2">Persons 2</option>
-                                            <option value="3">Persons 3</option>
-                                        </select>
-                                        <label for="SelectPerson">Persons</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="CategoriesSelect">
-                                            <option value="1">Kids</option>
-                                            <option value="2">1</option>
-                                            <option value="3">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                        <label for="CategoriesSelect">Categories</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control bg-white border-0" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Tour Booking End -->
+<!-- Contact Start -->
+<div class="container-fluid booking py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
 
-        <!-- Travel Guide Start -->
-        <div class="container-fluid guide py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Travel Guide</h5>
-                    <h1 class="mb-0">Meet Our Guide</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="guide-item">
-                            <div class="guide-img">
-                                <div class="guide-img-efects">
-                                    <img src="img/guide-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </div>
-                                <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="guide-title text-center rounded-bottom p-4">
-                                <div class="guide-title-inner">
-                                    <h4 class="mt-3">Full Name</h4>
-                                    <p class="mb-0">Designation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6">
+                <h5 class="section-booking-title pe-3">{{ __('Contact Us') }}</h5>
+                <h1 class="text-white mb-4">{{ __('Get In Touch') }}</h1>
+
+                <p class="text-white mb-4">
+                    {{ __('Have questions, suggestions, or need more information about Libya Land? We are happy to hear from you and assist you with anything you need.') }}
+                </p>
+
+                <p class="text-white mb-4">
+                    {{ __('Whether you are a traveler, researcher, or cultural enthusiast, feel free to contact us and we will respond as soon as possible.') }}
+                </p>
+
+                <a href="{{ route('about') }}" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">
+                    {{ __('Learn More About Us') }}
+                </a>
             </div>
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-6">
+                <h1 class="text-white mb-3">{{ __('Send Us a Message') }}</h1>
+                <p class="text-white mb-4">
+                    {{ __('We would love to hear from you. Please fill out the form below.') }}
+                </p>
+
+                <form method="POST" action="#">
+                    @csrf
+                    <div class="row g-3">
+
+                        <!-- Name -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" name="name" class="form-control bg-white border-0"
+                                       id="name" placeholder="{{ __('Your Name') }}" required>
+                                <label for="name">{{ __('Your Name') }}</label>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" name="email" class="form-control bg-white border-0"
+                                       id="email" placeholder="{{ __('Your Email') }}" required>
+                                <label for="email">{{ __('Your Email') }}</label>
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select name="subject" class="form-select bg-white border-0" id="subject">
+                                    <option value="general">{{ __('General Inquiry') }}</option>
+                                    <option value="tourism">{{ __('Tourism Information') }}</option>
+                                    <option value="landmarks">{{ __('Landmarks & History') }}</option>
+                                    <option value="support">{{ __('Technical Support') }}</option>
+                                </select>
+                                <label for="subject">{{ __('Subject') }}</label>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" name="phone" class="form-control bg-white border-0"
+                                       id="phone" placeholder="{{ __('Phone Number') }}">
+                                <label for="phone">{{ __('Phone Number') }}</label>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea name="message" class="form-control bg-white border-0"
+                                          placeholder="{{ __('Your Message') }}" id="message"
+                                          style="height: 120px" required></textarea>
+                                <label for="message">{{ __('Your Message') }}</label>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="col-12">
+                            <button class="btn btn-primary text-white w-100 py-3" type="submit">
+                                {{ __('Send Message') }}
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
         </div>
-        <!-- Travel Guide End -->
+    </div>
+</div>
+<!-- Contact End -->
+
+
 
         <!-- Blog Start -->
         <div class="container-fluid blog py-5">

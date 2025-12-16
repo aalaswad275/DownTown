@@ -29,7 +29,7 @@
         <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
     </head>
 
-    <body dir="rtl">
+    <body >
 
         <!-- Topbar Start -->
         <div class="container-fluid bg-primary px-5 d-none d-lg-block">

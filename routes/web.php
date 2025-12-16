@@ -48,7 +48,8 @@ Route::get('/about',[App\Http\Controllers\GenralController::class, 'about'])->na
 Route::get('/contact',[App\Http\Controllers\GenralController::class, 'contact'])->name('contact');
 Route::get('/maingallery',[App\Http\Controllers\GenralController::class, 'gallery'])->name('maingallery');
 Route::get('/service',[App\Http\Controllers\GenralController::class, 'service'])->name('service');
-
+Route::get('/PlacePhotos/{id}',[App\Http\Controllers\GenralController::class, 'Photos'])->name('PlacePhotos');
+Route::get('/PlaceInfo/{id}',[App\Http\Controllers\GenralController::class, 'Info'])->name('PlaceInfo');
 
 
 Route::resource('Store',App\Http\Controllers\StoreController::class);

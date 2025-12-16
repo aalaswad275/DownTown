@@ -953,7 +953,69 @@
     "Action": "إجراء",
     "No  Image Upload": "لا توجد صورة مرفوعة",
     "Are you sure you want to delete this landmark?":"هل أنت متأكد أنك تريد حذف هذا المعلم؟",
-    FETWR432
+    "Services": "الخدمات",
+    "Our Services": "خدماتنا",
+    "What We Offer at Libya Land": "ما الذي نقدمه في ليبيا لاند",
+
+    "Historical City Guides": "أدلة تاريخية للمدن",
+    "Discover the rich history of Libyan cities through detailed guides that explore ancient civilizations, Islamic heritage, and cultural landmarks across the country.":
+    "اكتشف التاريخ العريق للمدن الليبية من خلال أدلة تفصيلية تستعرض الحضارات القديمة، والتراث الإسلامي، والمعالم الثقافية في مختلف أنحاء البلاد.",
+
+    "Famous Landmarks": "المعالم السياحية الشهيرة",
+    "Explore Libya’s most famous landmarks, including Roman ruins, Greek temples, desert cities, and UNESCO World Heritage sites.":
+    "استكشف أشهر المعالم السياحية في ليبيا، بما في ذلك الآثار الرومانية، والمعابد اليونانية، والمدن الصحراوية، ومواقع التراث العالمي التابعة لليونسكو.",
+
+    "Libyan Culture & Lifestyle": "الثقافة ونمط الحياة الليبية",
+    "Experience authentic Libyan culture, traditional clothing, local customs, music, festivals, and the unique lifestyle of Libyan communities.":
+    "تعرّف على الثقافة الليبية الأصيلة، والأزياء التقليدية، والعادات المحلية، والموسيقى، والمهرجانات، ونمط الحياة المميز للمجتمع الليبي.",
+
+    "Local Events & Heritage Activities": "الفعاليات والأنشطة التراثية",
+    "Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.":
+    "تابع أحدث الفعاليات الثقافية، والمهرجانات التراثية، والمعارض، والاحتفالات التقليدية في مختلف المناطق الليبية.",
+
+    "Travel Planning & Recommendations": "التخطيط للرحلات والتوصيات السياحية",
+    "Get practical travel tips, recommended routes, best visiting times, and essential information for exploring Libya safely and comfortably.":
+    "احصل على نصائح عملية للسفر، ومسارات مقترحة، وأفضل أوقات الزيارة، ومعلومات أساسية لاستكشاف ليبيا بأمان وراحة.",
+
+    "Photo Galleries & Virtual Tours": "معارض الصور والجولات الافتراضية",
+    "Browse high-quality photo galleries and virtual tours that bring Libya’s landmarks and landscapes closer to you.":
+    "تصفح معارض صور عالية الجودة وجولات افتراضية تتيح لك استكشاف معالم ليبيا ومناظرها الطبيعية عن قرب.",
+
+    "View More Services": "عرض المزيد من الخدمات",
+      "Traditional Libyan Cuisine": "المطبخ الليبي التقليدي",
+    "Discover traditional Libyan dishes, local ingredients, and authentic flavors that reflect the country’s rich culinary heritage.":
+    "تعرّف على المطبخ الليبي التقليدي من خلال أشهر الأكلات الشعبية، والمكونات المحلية، والنكهات الأصيلة التي تعكس غنى التراث الغذائي الليبي.",
+
+    "Educational & Research Resources": "الموارد التعليمية والبحثية",
+    "Access reliable information, historical references, and educational resources for students, researchers, and history enthusiasts.":
+    "الوصول إلى معلومات موثوقة ومراجع تاريخية وموارد تعليمية مخصصة للطلاب والباحثين والمهتمين بالتاريخ والتراث.",
+        "Contact Us": "اتصل بنا",
+    "Get In Touch": "تواصل معنا",
+
+    "Have questions, suggestions, or need more information about Libya Land? We are happy to hear from you and assist you with anything you need.":
+    "هل لديك أسئلة أو اقتراحات أو تحتاج إلى مزيد من المعلومات عن ليبيا لاند؟ يسعدنا التواصل معك ومساعدتك في كل ما تحتاجه.",
+
+    "Whether you are a traveler, researcher, or cultural enthusiast, feel free to contact us and we will respond as soon as possible.":
+    "سواء كنت مسافرًا، أو باحثًا، أو مهتمًا بالثقافة والتراث، لا تتردد في التواصل معنا وسنرد عليك في أقرب وقت ممكن.",
+
+    "Learn More About Us": "تعرف علينا أكثر",
+
+    "Send Us a Message": "أرسل لنا رسالة",
+    "We would love to hear from you. Please fill out the form below.":
+    "يسعدنا سماع رأيك أو استفسارك، يرجى تعبئة النموذج أدناه.",
+
+    "Your Name": "الاسم الكامل",
+    "Your Email": "البريد الإلكتروني",
+    "Phone Number": "رقم الهاتف",
+
+    "Subject": "الموضوع",
+    "General Inquiry": "استفسار عام",
+    "Tourism Information": "معلومات سياحية",
+    "Landmarks & History": "المعالم والتاريخ",
+    "Technical Support": "الدعم الفني",
+
+    "Your Message": "رسالتك",
+    "Send Message": "إرسال الرسالة"
 
 
 }

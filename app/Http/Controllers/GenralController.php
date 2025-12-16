@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Slider;
 use App\Models\Gallery;
-use App\Models\Landmarks;
+use App\Models\Landmark;
 use App\Models\Store;
 use Illuminate\Http\Request;
 
@@ -12,8 +12,11 @@ class GenralController extends Controller
     //
     public function Slider(){
         $slider = Slider::Where('active','1')->get();
+        $mainlandmark = Landmark::Where('main','1')->get();
+        $stores = Store::all();
+        $galleries = Gallery::Where('active','1')->get();
         $count=0;
-        return view('welcome',compact('slider','count'));
+        return view('welcome',compact('slider','count','mainlandmark','stores','galleries'));
 
     }
    public function about(){
@@ -40,5 +43,13 @@ class GenralController extends Controller
      $landmarks = Landmarks::Where('active','1')->get();
      return view('main.destinstion',compact('landmarks'));
     }
+    public function Photos($id){
+        $landmark = Landmark::findOrFail($id);
+        return view('main.placephotos',compact('landmark'));
+       }
+       public function Info($id){
+        $landmark = Landmark::findOrFail($id);
+        return view('main.placeinfo',compact('landmark'));
+       }
 
 }
