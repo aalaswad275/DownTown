@@ -17,8 +17,8 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
-                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
-                            <img src="{{asset('frontend/img/about-img.jpg')}}" class="img-fluid w-100 h-100" alt="">
+                        <div class="h-100" style="border: 50px solid; border-color: transparent #717e3c transparent #717e3c;">
+                            <img src="{{asset('frontend/img/logo.jpg')}}" class="img-fluid w-100 h-100" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">

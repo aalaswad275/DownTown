@@ -124,7 +124,7 @@
                                 <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
                                        <h5 class="mb-4">{{ __('Historical City Guides') }}</h5>
-<p class="mb-0">
+                                        <p class="mb-0">
     {{ __('Discover the rich history of Libyan cities through detailed guides that explore ancient civilizations, Islamic heritage, and cultural landmarks across the country.') }}
 </p>
 
@@ -731,21 +731,21 @@
         <div class="container-fluid testimonial py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Testimonial</h5>
-                    <h1 class="mb-0">Our Clients Say!!!</h1>
+                    <h5 class="section-title px-3">{{__('Testimonial')}}</h5>
+                    <h1 class="mb-0">{{__('Our Vistors Say!!!')}}</h1>
                 </div>
                 <div class="testimonial-carousel owl-carousel">
                     <div class="testimonial-item text-center rounded pb-4">
                         <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            <p class="text-center mb-5">{{__('Libya Land made my trip to libya unforgettable.')}}
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
                             <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
+                            <h5 class="mb-0">{{__('Ahmed Saeed')}}</h5>
+                            <p class="mb-0">{{__('Qratija, Tunisia')}}</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-primary"></i>
                                 <i class="fas fa-star text-primary"></i>
@@ -757,15 +757,15 @@
                     </div>
                     <div class="testimonial-item text-center rounded pb-4">
                         <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            <p class="text-center mb-5"> {{__('Thanks to Libya Land, my journey through Libya was smooth and full of amazing experiences')}}
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
                             <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
+                            <h5 class="mb-0">{{__('Ali Khaled')}}</h5>
+                            <p class="mb-0">{{__('Cario, Egypt')}}</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-primary"></i>
                                 <i class="fas fa-star text-primary"></i>
@@ -777,15 +777,15 @@
                     </div>
                     <div class="testimonial-item text-center rounded pb-4">
                         <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            <p class="text-center mb-5">{{__('With Libya Land, every destination in Libya felt special and meaningful')}}
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
                             <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
+                            <h5 class="mb-0">{{__('John Adam')}}</h5>
+                            <p class="mb-0">{{__('New York, USA')}}</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-primary"></i>
                                 <i class="fas fa-star text-primary"></i>
@@ -797,15 +797,15 @@
                     </div>
                     <div class="testimonial-item text-center rounded pb-4">
                         <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            <p class="text-center mb-5">{{__('Libya Land made exploring Libya a dream come true.')}}
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
                             <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
+                            <h5 class="mb-0">{{__('Sara Mohammed')}}</h5>
+                            <p class="mb-0">{{__('Surman, Libya')}}</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-primary"></i>
                                 <i class="fas fa-star text-primary"></i>

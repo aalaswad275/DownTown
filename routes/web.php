@@ -50,7 +50,7 @@ Route::get('/maingallery',[App\Http\Controllers\GenralController::class, 'galler
 Route::get('/service',[App\Http\Controllers\GenralController::class, 'service'])->name('service');
 Route::get('/PlacePhotos/{id}',[App\Http\Controllers\GenralController::class, 'Photos'])->name('PlacePhotos');
 Route::get('/PlaceInfo/{id}',[App\Http\Controllers\GenralController::class, 'Info'])->name('PlaceInfo');
-
+Route::get('/landmark',[App\Http\Controllers\GenralController::class, 'landmark'])->name('landmark');
 
 Route::resource('Store',App\Http\Controllers\StoreController::class);
 Route::resource('sliders',App\Http\Controllers\SLiderController::class);

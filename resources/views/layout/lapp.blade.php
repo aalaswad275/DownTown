@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Travela - Tourism Website Template</title>
+        <title>{{__('Libya Land')}}</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -88,9 +88,9 @@
                         <a href="{{route('welcome')}}" class="nav-item nav-link active">{{__('Home')}}</a>
                         <a href="{{route('about')}}" class="nav-item nav-link">{{__('About')}}</a>
                         <a href="{{route('maingallery')}}" class="nav-item nav-link">{{__('Gallery')}}</a>
-                        <a href="services.html" class="nav-item nav-link">Services</a>
-                        <a href="packages.html" class="nav-item nav-link">Packages</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="{{route('service')}}" class="nav-item nav-link">{{__('Services')}}</a>
+                        <a href="{{route('landmark')}}" class="nav-item nav-link">{{__('Landmarks')}}</a>
+                        <a href="{{route('stores.index')}}" class="nav-item nav-link">{{__('Stores')}}</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -105,7 +105,7 @@
                         </div>
                         <a href="{{route('contact')}}" class="nav-item nav-link">{{__('Contact')}}</a>
                     </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+                    
                 </div>
             </nav>
 
@@ -137,40 +137,40 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <h4 class="mb-4 text-white">{{__('Libya Land')}}</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> {{__('Surman, Libya')}}</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> {{__('info@libyaland.ly')}}</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +218 91 000 00 00 </a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +218 92 000 00 00</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                            <h4 class="mb-4 text-white">{{__('Libya Land')}}</h4></h4>
+                            <a href="{{route('about')}}"><i class="fas fa-angle-right me-2"></i> {{__('About')}}</a>
+                            <a href="{{route('landmark')}}"><i class="fas fa-angle-right me-2"></i>{{__('Landmarks')}}</a>
+                            <a href="{{route('maingallery')}}"><i class="fas fa-angle-right me-2"></i>{{__('Gallery')}}</a>
+                            <a href="{{route('service')}}"><i class="fas fa-angle-right me-2"></i> {{__('Services')}}</a>
+                            <a href="{{route('stores.index')}}"><i class="fas fa-angle-right me-2"></i>{{__('Stores')}}</a>
+                            <a href="{{route('contact')}}"><i class="fas fa-angle-right me-2"></i> {{__('Contact')}}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                            <h4 class="mb-4 text-white">{{__('Our Most Popular Landmarks')}}</h4>
+                            <a href="{{route('PlaceInfo',10)}}"><i class="fas fa-angle-right me-2"></i> {{__('Saraya Alhamra')}}</a>
+                            <a href="{{route('PlaceInfo',11)}}"><i class="fas fa-angle-right me-2"></i> {{__('Sabratha Ruins')}}</a>
+                            <a href="{{route('PlaceInfo',12)}}"><i class="fas fa-angle-right me-2"></i> {{__('Leptis Magna Ruins')}}</a>
+                            <a href="{{route('PlaceInfo',13)}}"><i class="fas fa-angle-right me-2"></i> {{__('Ghadames Old Town')}}</a>
+                            <a href="{{route('PlaceInfo',14)}}"><i class="fas fa-angle-right me-2"></i>{{__('Shahat')}}</a>
+                            <a href="{{route('PlaceInfo',15)}}"><i class="fas fa-angle-right me-2"></i>{{__('Ghaat')}}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">

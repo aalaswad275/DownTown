@@ -32,7 +32,7 @@ class GenralController extends Controller
    }
 
    public function service(){
-    return view('main.service');
+    return view('main.services');
    }
    public function store(){
     $store = Store::Where('active','1')->get();
@@ -50,6 +50,10 @@ class GenralController extends Controller
        public function Info($id){
         $landmark = Landmark::findOrFail($id);
         return view('main.placeinfo',compact('landmark'));
+       }
+       public function landmark(){
+        $landmark = Landmark::Where('active','1')->get();
+        return view('main.landmark',compact('landmark'));
        }
 
 }
