@@ -106,7 +106,7 @@
           </li>
         </ul>
       </nav>
-      <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+      <aside class="sidebar-left border-right bg-ourcolor shadow" id="leftSidebar" data-simplebar>
         <a href="{{route('dashboard')}}" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
           <i class="fe fe-x"><span class="sr-only"></span></i>
         </a>

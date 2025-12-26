@@ -1033,7 +1033,28 @@
 
   "Libya Land made exploring Libya a dream come true.": "جعلت ليبيا لاند استكشاف ليبيا حلمًا تحقق.",
   "Sara Mohammed": "سارة محمد",
-  "Surman, Libya": "صرمان، ليبيا"
+  "Surman, Libya": "صرمان، ليبيا",
+    "Stores": "المتاجر",
+    "Add Store": "إضافة متجر",
+    "Edit Store": "تعديل متجر",
+    "Store Details": "تفاصيل المتجر",
+
+    "Name": "الاسم",
+    "Description": "الوصف",
+    "Address": "العنوان",
+    "Phone": "الهاتف",
+    "Email": "البريد الإلكتروني",
+    "Image": "الصورة",
+    "Current Image": "الصورة الحالية",
+    "Change Image": "تغيير الصورة",
+    "Actions": "الإجراءات",
+
+    "Save": "حفظ",
+    "Update": "تحديث",
+    "Delete": "حذف",
+    "Show": "عرض",
+    "Are you sure?": "هل أنت متأكد؟"
+
 
 
 

@@ -25,7 +25,7 @@
                         @foreach ( $slider as $s )
                         <div class="carousel-item @if($count==0) active @endif ">
                             <img src="{{asset('frontend/img/'.$s->image )}}" class="img-fluid" alt="Image">
-                            <div class="carousel-caption" style="left:15%">
+                            <div class="carousel-caption" style="right:15%">
                                 <div class="p-3" style="max-width: 900px;">
                                     <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">{{$s->title}}</h4>
                                     <h1 class="display-2 text-capitalize text-white mb-4">{{$s->subtitle}}</h1>
@@ -61,8 +61,8 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
-                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
-                            <img src="img/about-img.jpg" class="img-fluid w-100 h-100" alt="">
+                        <div class="h-100" style="border: 50px solid; border-color: transparent #717e3c transparent #717e3c;">
+                            <img src="{{asset('frontend/img/logo.png')}}" class="img-fluid w-100 h-100" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
@@ -283,9 +283,9 @@
                                         @foreach($mainlandmark as $ml )
                                         <div class="col-md-4">
                                             <div class="destination-img">
-                                                <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $ml->image)}}" alt="">
+                                                <img class="img-fluid rounded w-100 " src="{{asset('frontend/img/landmarks/'. $ml->image)}}" height="100px" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="{{route('PlacePhotos', $ml->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{ gettype($ml->gallery) }} {{__('Photos')}}</a>
+                                                    <a href="{{route('PlacePhotos', $ml->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($ml->gallery)}} {{__('Photos')}}</a>
                                                     <h4 class="text-white mb-2 mt-3">{{$ml->name}}</h4>
                                                     <a href="{{route('PlaceInfo',$ml->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
@@ -303,19 +303,19 @@
 
                             </div>
                         </div>
-                        {{-- <div id="tab-2" class="tab-pane fade show p-0">
+                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 @foreach($tripolilandmark as $tl )
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks'. $tl->image)}}" alt="">
+                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $tl->image)}}" alt="">
                                             <div class="destination-overlay p-4">
-                                                <a href="{{route('PlacePhotos', $tl->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($ml->gallery)}} {{__('Photos')}}</a>
+                                                <a href="{{route('PlacePhotos', $tl->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($tl->gallery)}} {{__('Photos')}}</a>
                                                 <h4 class="text-white mb-2 mt-3">{{$tl->name}}</h4>
                                                 <a href="{{route('PlaceInfo',$tl->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                             <div class="search-icon">
-                                                <a href="{{asset('frontend/img/landmarks'. $tl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
+                                                <a href="{{asset('frontend/img/landmarks/'.$tl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                             </div>
                                     </div>
                                 </div>
@@ -329,14 +329,14 @@
                                 @foreach($Gihdamaslandmark as $gl )
                                 <div class="col-lg-6">
                                     <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks'. $gl->image)}}" alt="">
+                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $gl->image)}}" alt="">
                                             <div class="destination-overlay p-4">
                                                 <a href="{{route('PlacePhotos', $gl->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($gl->gallery)}} {{__('Photos')}}</a>
                                                 <h4 class="text-white mb-2 mt-3">{{$gl->name}}</h4>
                                                 <a href="{{route('PlaceInfo',$gl->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                             <div class="search-icon">
-                                                <a href="{{asset('frontend/img/landmarks'. $gl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
+                                                <a href="{{asset('frontend/img/landmarks/'. $gl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                             </div>
                                     </div>
                                 </div>
@@ -348,14 +348,14 @@
                                 @foreach($Sabrathalandmark as $sl )
                                 <div class="col-lg-6">
                                     <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks'. $sl->image)}}" alt="">
+                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $sl->image)}}" alt="">
                                             <div class="destination-overlay p-4">
                                                 <a href="{{route('PlacePhotos', $sl->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($sl->gallery)}} {{__('Photos')}}</a>
                                                 <h4 class="text-white mb-2 mt-3">{{$sl->name}}</h4>
                                                 <a href="{{route('PlaceInfo',$sl->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                             <div class="search-icon">
-                                                <a href="{{asset('frontend/img/landmarks'. $sl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
+                                                <a href="{{asset('frontend/img/landmarks/'. $sl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                             </div>
                                     </div>
                                 </div>
@@ -367,14 +367,14 @@
                                  @foreach($Benghazilandmark as $bl )
                                 <div class="col-lg-6">
                                     <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks'. $sl->image)}}" alt="">
+                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $sl->image)}}" alt="">
                                             <div class="destination-overlay p-4">
                                                 <a href="{{route('PlacePhotos', $sl->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($bl->gallery)}} {{__('Photos')}}</a>
                                                 <h4 class="text-white mb-2 mt-3">{{$bl->name}}</h4>
                                                 <a href="{{route('PlaceInfo',$bl->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                             <div class="search-icon">
-                                                <a href="{{asset('frontend/img/landmarks'. $bl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
+                                                <a href="{{asset('frontend/img/landmarks/'. $bl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                             </div>
                                     </div>
                                 </div>
@@ -386,20 +386,20 @@
                                  @foreach($Ghaatlandmark as $gl )
                                 <div class="col-lg-6">
                                     <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks'. $gl->image)}}" alt="">
+                                        <img class="img-fluid rounded w-100" src="{{asset('frontend/img/landmarks/'. $gl->image)}}" alt="">
                                             <div class="destination-overlay p-4">
                                                 <a href="{{route('PlacePhotos', $gl->id)}}" class="btn btn-primary text-white rounded-pill border py-2 px-3">{{count($sl->gallery)}} {{__('Photos')}}</a>
                                                 <h4 class="text-white mb-2 mt-3">{{$gl->name}}</h4>
                                                 <a href="{{route('PlaceInfo',$gl->id)}}" class="btn-hover text-white">{{__('More details on Place')}} <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                             <div class="search-icon">
-                                                <a href="{{asset('frontend/img/landmarks'. $gl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
+                                                <a href="{{asset('frontend/img/landmarks/'. $gl->image)}}" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
                                             </div>
                                     </div>
                                 </div>
                                 @endforeach
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>

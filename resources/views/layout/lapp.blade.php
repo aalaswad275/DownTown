@@ -77,20 +77,20 @@
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Libya Land</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+
+                    <img src="{{asset('frontend/img/logo.png')}}" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="{{route('welcome')}}" class="nav-item nav-link active">{{__('Home')}}</a>
-                        <a href="{{route('about')}}" class="nav-item nav-link">{{__('About')}}</a>
-                        <a href="{{route('maingallery')}}" class="nav-item nav-link">{{__('Gallery')}}</a>
-                        <a href="{{route('service')}}" class="nav-item nav-link">{{__('Services')}}</a>
-                        <a href="{{route('landmark')}}" class="nav-item nav-link">{{__('Landmarks')}}</a>
-                        <a href="{{route('stores.index')}}" class="nav-item nav-link">{{__('Stores')}}</a>
+                        <a href="{{route('welcome')}}" class="nav-item nav-link {{ Route::is('welcome') ? 'active' : '' }}">{{__('Home')}}</a>
+                        <a href="{{route('about')}}" class="nav-item nav-link {{ Route::is('about') ? 'active' : '' }}">{{__('About')}}</a>
+                        <a href="{{route('maingallery')}}" class="nav-item nav-link {{ Route::is('maingallery') ? 'active' : '' }}">{{__('Gallery')}}</a>
+                        <a href="{{route('service')}}" class="nav-item nav-link {{ Route::is('service') ? 'active' : '' }}">{{__('Services')}}</a>
+                        <a href="{{route('landmark')}}" class="nav-item nav-link {{ Route::is('landmark') ? 'active' : '' }}">{{__('Landmarks')}}</a>
+                        <a href="{{route('stores.index')}}" class="nav-item nav-link {{ Route::is('stores.index') ? 'active' : '' }}">{{__('Stores')}}</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -103,7 +103,7 @@
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="{{route('contact')}}" class="nav-item nav-link">{{__('Contact')}}</a>
+                        <a href="{{route('contact')}}" class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">{{__('Contact')}}</a>
                     </div>
 
                 </div>
@@ -176,42 +176,27 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item">
                             <div class="row gy-3 gx-2 mb-4">
-                                <div class="col-xl-6">
-                                    <form>
+                                <div class="col-xl-12">
+                                    <form method="GET" action="<?php echo LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale()) ?>">
+                                        @csrf
                                         <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
+                                            <select class="form-select bg-light border" id="select1" onchange="submit()">
+
+                                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <option class="option_hover" >
+            <a class="me-3 text-light"rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        </option>
+    @endforeach
                                             </select>
-                                            <label for="select1">English</label>
+                                            <label for="select1">{{__('Lanaguage')}}</label>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-xl-6">
-                                    <form>
-                                        <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
-                                            </select>
-                                            <label for="select1">$</label>
-                                        </div>
-                                    </form>
-                                </div>
+
                             </div>
-                            <h4 class="text-white mb-3">Payments</h4>
-                            <div class="footer-bank-card">
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>

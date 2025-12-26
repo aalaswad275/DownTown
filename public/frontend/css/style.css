@@ -1246,6 +1246,13 @@
     color: #c4ac86;
 }
 
+.option_hover > a:hover {
+    color: #717e3c !important;
+}
+.img-fluid2 {
+    max-width: 100%;
+    max-height: 200px;
+}
 /*** Footer End ***/
 
 /*** copyright Start ***/

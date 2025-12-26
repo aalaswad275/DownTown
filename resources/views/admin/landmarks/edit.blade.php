@@ -72,7 +72,7 @@
         <div class="mb-3 mt-3">
             <label>Tags (comma separated)</label>
             <input type="text" name="tags"
-                   value="{{ $landmarks->tags ? implode(',', $landmarks->tags) : '' }}"
+                   value="{{ $landmarks->tags ? '': implode(',', $landmarks->tags ) }}"
                    class="form-control">
         </div>
 
