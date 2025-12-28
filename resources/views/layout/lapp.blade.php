@@ -177,22 +177,25 @@
                         <div class="footer-item">
                             <div class="row gy-3 gx-2 mb-4">
                                 <div class="col-xl-12">
-                                    <form method="GET" action="<?php echo LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale()) ?>">
-                                        @csrf
-                                        <div class="form-floating">
-                                            <select class="form-select bg-light border" id="select1" onchange="submit()">
+                                    <form>
+    <div class="form-floating">
+        <select class="form-select bg-light border"
+                id="select1"
+                onchange="location = this.value;">
 
-                                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-        <option class="option_hover" >
-            <a class="me-3 text-light"rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                {{ $properties['native'] }}
-            </a>
-        </option>
-    @endforeach
-                                            </select>
-                                            <label for="select1">{{__('Lanaguage')}}</label>
-                                        </div>
-                                    </form>
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <option
+                    value="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                    {{ app()->getLocale() == $localeCode ? 'selected' : '' }}
+                >
+                    {{ $properties['native'] }}
+                </option>
+            @endforeach
+
+        </select>
+        <label for="select1">{{ __('Language') }}</label>
+    </div>
+</form>
                                 </div>
 
                             </div>
