@@ -58,15 +58,15 @@
                                 <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
                             </div>
                         </div>
-                            <ul>
+
     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-        <li>
+
             <a class="me-3 text-light"rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                 {{ $properties['native'] }}
             </a>
-        </li>
+
     @endforeach
-</ul>
+
                     </div>
                 </div>
             </div>
@@ -236,7 +236,7 @@
         <script src="{{asset('frontend/lib/easing/easing.min.js')}}"></script>
         <script src="{{asset('frontend/lib/waypoints/waypoints.min.js')}}"></script>
         <script src="{{asset('frontend/lib/owlcarousel/owl.carousel.min.js')}}"></script>
-        <script src="{{asset('frontend/lib/lightbox/js/lightbox.min.js')}}"></script>
+        <script src="{{asset('frontend/lib/lightbox/js/lightbox.min.js')}}"></script> {{-----}}
 
 
         <!-- Template Javascript -->

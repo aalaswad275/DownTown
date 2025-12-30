@@ -124,7 +124,7 @@ class SliderController extends Controller
             $file=$request->file('slider_image');
             $filename=time().'-'.$file->getClientOriginalName();
             $file->move(public_path('frontend/img/'),$filename);
-            $imageslider=filename();
+            $imageslider=$filename;
 
             $oldpath=public_path('frontend/img'.$slider->image);
             if($slider->image && File::exists($oldpath))
