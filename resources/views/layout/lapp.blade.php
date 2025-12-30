@@ -46,18 +46,37 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
+                       @guest
+                            @if (Route::has('login'))
+
+                                    <a class="nav-link me-3 text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+                            @endif
+
+                            @if (Route::has('register'))
+
+                                    <a class="nav-link me-3 text-light" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+                            @endif
+                        @else
+                            <div class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
                             </div>
-                        </div>
+                        @endguest
 
     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
@@ -92,15 +111,14 @@
                         <a href="{{route('landmark')}}" class="nav-item nav-link {{ Route::is('landmark') ? 'active' : '' }}">{{__('Landmarks')}}</a>
                         <a href="{{route('stores.index')}}" class="nav-item nav-link {{ Route::is('stores.index') ? 'active' : '' }}">{{__('Stores')}}</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{__('Famous Landmarks')}}</a>
                             <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="tour.html" class="dropdown-item">Explore Tour</a>
-                                <a href="booking.html" class="dropdown-item">Travel Booking</a>
-                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
-                                <a href="guides.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            <a href="{{route('PlaceInfo',9)}}" class="dropdown-item"><i class="fas fa-angle-right me-2"></i> {{__('Saraya Alhamra')}}</a>
+                            <a href="{{route('PlaceInfo',11)}}" class="dropdown-item"><i class="fas fa-angle-right me-2"></i> {{__('Sabratha Ruins')}}</a>
+                            <a href="{{route('PlaceInfo',12)}}" class="dropdown-item"><i class="fas fa-angle-right me-2"></i> {{__('Leptis Magna Ruins')}}</a>
+                            <a href="{{route('PlaceInfo',13)}}" class="dropdown-item"><i class="fas fa-angle-right me-2"></i> {{__('Ghadames Old Town')}}</a>
+                            <a href="{{route('PlaceInfo',14)}}" class="dropdown-item"><i class="fas fa-angle-right me-2"></i>{{__('Shahat')}}</a>
+                            <a href="{{route('PlaceInfo',15)}}" class="dropdown-item"><i class="fas fa-angle-right me-2"></i>{{__('Ghaat')}}</a>
                             </div>
                         </div>
                         <a href="{{route('contact')}}" class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">{{__('Contact')}}</a>
