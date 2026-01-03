@@ -18,7 +18,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
                         <div class="h-100" style="border: 50px solid; border-color: transparent #717e3c transparent #717e3c;">
-                            <img src="{{asset('frontend/img/logo.jpg')}}" class="img-fluid w-100 h-100" alt="">
+                            <img src="{{asset('frontend/img/logo.png')}}" class="img-fluid w-100 h-100" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
@@ -30,25 +30,28 @@ We provide travelers, researchers, and locals with reliable information about Li
 We aim to support local tourism initiatives, highlight hidden gems, and connect visitors with trusted services that make every journey safe and memorable.')}}</p>
                         <div class="row gy-2 gx-4 mb-4">
                             <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('First Class Flights') }}</p>
+
                             </div>
                             <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('Handpicked Hotels') }}</p>
+
                             </div>
                             <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('5 Star Accommodations') }}</p>
+
                             </div>
                             <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('Latest Model Vehicles') }}</p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('150 Premium City Tours') }}</p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('24/7 Service') }}</p>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Read More</a>
+
                     </div>
                 </div>
             </div>

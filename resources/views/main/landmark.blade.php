@@ -42,7 +42,7 @@
                                     <small class="fa fa-star text-primary"></small>
                                     <small class="fa fa-star text-primary"></small>
                                 </div>
-                                <p class="mb-4">{{mb_substr($landmark->description, 0, 50)}}...</p>
+                                <p class="mb-4">{!!mb_substr($landmark->description, 0, 50)!!}...</p>
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">

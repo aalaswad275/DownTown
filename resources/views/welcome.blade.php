@@ -3,7 +3,8 @@
 @section('slider')
 
  <!-- Carousel Start -->
-            <div class="carousel-header">
+            <div class="carousel-header" dir="{{ app()->getLocale() === 'ar' ? 'ltr' : '' }}">
+                 <div class="hidden" style="display:none;">{{$count=0}}</div>
                 <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
 
@@ -101,8 +102,8 @@
         <div class="container-fluid bg-light service py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Searvices</h5>
-                    <h1 class="mb-0">Our Services</h1>
+                    <h5 class="section-title px-3">{{ __('Services') }}</h5>
+                    <h1 class="mb-0">{{ __('Our Services') }}</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6">
@@ -116,52 +117,11 @@
                                         </p>
                                     </div>
                                     <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
+                                        <i class="fa fa-landmark fa-4x text-primary"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                       <h5 class="mb-4">{{ __('Historical City Guides') }}</h5>
-                                        <p class="mb-0">
-    {{ __('Discover the rich history of Libyan cities through detailed guides that explore ancient civilizations, Islamic heritage, and cultural landmarks across the country.') }}
-</p>
 
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">{{ __('Libyan Culture & Lifestyle') }}</h5>
-<p class="mb-0">
-    {{ __('Experience authentic Libyan culture, traditional clothing, local customs, music, festivals, and the unique lifestyle of Libyan communities.') }}
-</p>
-
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">{{ __('Local Events & Heritage Activities') }}</h5>
-<p class="mb-0">
-    {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
-</p>
-
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -169,62 +129,23 @@
                             <div class="col-12">
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
                                     <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
+                                        <i class="fa fa-calendar-days fa-4x text-primary"></i>
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">{{ __('Local Events & Heritage Activities') }}</h5>
-<p class="mb-0">
-    {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
-</p>
+                                        <p class="mb-0">
+                                            {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
+                                        </p>
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                       <h5 class="mb-4">{{ __('Travel Planning & Recommendations') }}</h5>
-<p class="mb-0">
-    {{ __('Get practical travel tips, recommended routes, best visiting times, and essential information for exploring Libya safely and comfortably.') }}
-</p>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">{{ __('Educational & Research Resources') }}</h5>
-                                <p class="mb-0">
-                                    {{ __('Access reliable information, historical references, and educational resources for students, researchers, and history enthusiasts.') }}
-                                </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">{{ __('Traditional Libyan Cuisine') }}</h5>
-                                <p class="mb-0">
-                                    {{ __('Discover traditional Libyan dishes, local ingredients, and authentic flavors that reflect the country’s rich culinary heritage.') }}
-                                </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Service More</a>
+                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="{{route('service')}}">{{__('Service More')}}</a>
                         </div>
                     </div>
                 </div>
@@ -297,13 +218,9 @@
                                         @endforeach
                                     </div>
                                 </div>
-
-
-
-
                             </div>
                         </div>
-                         <div id="tab-2" class="tab-pane fade show p-0">
+                        <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 @foreach($tripolilandmark as $tl )
                                 <div class="col-lg-4">
@@ -320,8 +237,6 @@
                                     </div>
                                 </div>
                                 @endforeach
-
-
                             </div>
                         </div>
                         <div id="tab-3" class="tab-pane fade show p-0">
@@ -422,7 +337,7 @@
                             <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>{{$st->name}}</small>
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>{{$st->openhours}}</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 {{st->address}}</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 {{$st->address}}</small>
                             </div>
                             <div class="packages-price py-2 px-4"></div>
                         </div>
@@ -482,7 +397,7 @@
                             </div>
                             <div class="row bg-primary rounded-bottom mx-0">
                                 <div class="col-6 text-start px-0">
-                                    <a href="{{route('store.show',$st->id)}}" class="btn-hover btn text-white py-2 px-4">{{__('Read More')}}</a>
+                                    <a href="{{route('stores.show',$st->id)}}" class="btn-hover btn text-white py-2 px-4">{{__('Read More')}}</a>
                                 </div>
 
                             </div>
@@ -643,92 +558,72 @@
 
 
 
-        <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Our Blog</h5>
-                    <h1 class="mb-4">Popular Travel Blogs</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt tenetur sapiente atque. Magni non explicabo beatae sit, vel reiciendis consectetur numquam id similique sunt error obcaecati ducimus officia maiores.
-                    </p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <div class="blog-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src="img/blog-1.jpg" alt="Image">
-                                    <div class="blog-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
-                                </div>
-                            </div>
-                            <div class="blog-content border border-top-0 rounded-bottom p-4">
-                                <p class="mb-3">Posted By: Royal Hamblin </p>
-                                <a href="#" class="h4">Adventures Trip</a>
-                                <p class="my-3">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <div class="blog-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src="img/blog-2.jpg" alt="Image">
-                                    <div class="blog-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
-                                </div>
-                            </div>
-                            <div class="blog-content border border-top-0 rounded-bottom p-4">
-                                <p class="mb-3">Posted By: Royal Hamblin </p>
-                                <a href="#" class="h4">Adventures Trip</a>
-                                <p class="my-3">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <div class="blog-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src="img/blog-3.jpg" alt="Image">
-                                    <div class="blog-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
-                                </div>
-                            </div>
-                            <div class="blog-content border border-top-0 rounded-bottom p-4">
-                                <p class="mb-3">Posted By: Royal Hamblin </p>
-                                <a href="#" class="h4">Adventures Trip</a>
-                                <p class="my-3">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Most Visited Landmarks Start -->
+<div class="container-fluid blog py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">{{ __('Trending Now') }}</h5>
+            <h1 class="mb-4">{{ __('Most Visited Landmarks This Hour') }}</h1>
+            <p class="mb-0">
+                {{ __('Explore the landmarks that visitors are viewing the most right now. Discover what is trending and popular at this very moment.') }}
+            </p>
         </div>
-        <!-- Blog End -->
+
+        <div class="row g-4 justify-content-center">
+            @foreach($toplm as $item)
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <div class="blog-img-inner">
+                                <img class="img-fluid w-100 rounded-top"
+                                     src="{{ asset('frontend/img/landmarks/'.$item->image) }}"
+                                     alt="{{ $item->name }}">
+                                <div class="blog-icon">
+                                    <a href="{{ route('PlaceInfo',$item->id) }}" class="my-auto">
+                                        <i class="fas fa-link fa-2x text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
+                                <small class="flex-fill text-center border-end py-2">
+                                    <i class="fa fa-clock text-primary me-2"></i>
+                                    {{ __('This Hour') }}
+                                </small>
+                                <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2">
+                                    <i class="fa fa-eye text-primary me-2"></i>
+                                    {{ $item->views }}
+                                </a>
+                                <a href="#" class="btn-hover flex-fill text-center text-white py-2">
+                                    <i class="fa fa-comments text-primary me-2"></i>
+                                    {{ $item->comments_count }}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="blog-content border border-top-0 rounded-bottom p-4">
+                            <a href="{{ route('PlaceInfo',$item->id) }}" class="h4">
+                                {{ $item->name }}
+                            </a>
+                            <p class="my-3">
+                                {!! Str::limit(strip_tags($item->description), 100) !!}
+                            </p>
+                            <a href="{{ route('PlaceInfo',$item->id) }}"
+                               class="btn btn-primary rounded-pill py-2 px-4">
+                                {{ __('View Landmark') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+</div>
+<!-- Most Visited Landmarks End -->
 
         <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
+        <div class="container-fluid testimonial py-5 dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">{{__('Testimonial')}}</h5>
@@ -741,7 +636,7 @@
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
-                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="Image">
+                            <img src="{{asset('frontend/img/testimonial-1.jpg')}}" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
                             <h5 class="mb-0">{{__('Ahmed Saeed')}}</h5>
@@ -761,7 +656,7 @@
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
-                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="Image">
+                            <img src="{{asset('frontend/img/guide-2.jpg')}}" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
                             <h5 class="mb-0">{{__('Ali Khaled')}}</h5>
@@ -781,7 +676,7 @@
                             </p>
                         </div>
                         <div class="testimonial-img p-1">
-                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="Image">
+                            <img src="{{asset('frontend/img/guide-4.jpg')}}" class="img-fluid rounded-circle" alt="Image">
                         </div>
                         <div style="margin-top: -35px;">
                             <h5 class="mb-0">{{__('John Adam')}}</h5>

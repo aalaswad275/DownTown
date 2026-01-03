@@ -20,8 +20,13 @@ class GenralController extends Controller
          $Ghaatlandmark=Landmark::Where('city_id','87')->get();
         $stores = Store::all();
         $galleries = Gallery::Where('active','1')->get();
+        $toplm = Landmark::withCount('comments')
+    ->orderBy('views', 'desc')
+    ->take(3)
+    ->get();
+
         $count=0;
-        return view('welcome',compact('slider','Ghaatlandmark','Benghazilandmark','Sabrathalandmark','Gihdamaslandmark','count','mainlandmark','stores','galleries','tripolilandmark'));
+        return view('welcome',compact('slider','toplm','Ghaatlandmark','Benghazilandmark','Sabrathalandmark','Gihdamaslandmark','count','mainlandmark','stores','galleries','tripolilandmark'));
 
     }
    public function about(){
@@ -58,7 +63,28 @@ class GenralController extends Controller
         $landmark = Landmark::findOrFail($id);
         $landmark->views=$landmark->views+1;
         $landmark->save();
-        return view('main.placeinfo',compact('landmark'));
+        $comments = $landmark->comments;
+        return view('main.placeinfo',compact('landmark','comments'));
+       }
+       public function Comment(Request $request , $id){
+        $landmark = Landmark::findOrFail($id);
+        $landmark->views=$landmark->views+1;
+        $landmark->save();
+        $comments = $landmark->comments;
+
+        $request->validate([
+            'name'=>'required',
+
+            'comment'=>'required',
+        ]);
+
+        $landmark->comments()->create([
+            'name'=>$request->name,
+            'landmark_id'=>$id,
+            'comment'=>$request->comment,
+        ]);
+
+        return view('main.placeinfo',compact('landmark','comments'));
        }
        public function landmark(){
         $landmarks = Landmark::Where('active','1')->get();

@@ -13,6 +13,26 @@ return new class extends Migration
     {
         Schema::create('stores', function (Blueprint $table) {
             $table->id();
+
+            $table->string('name');
+            $table->string('description');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email');
+
+            $table->string('image')->nullable();
+
+            $table->string('longitude')->nullable();
+            $table->string('latitude')->nullable();
+
+            $table->integer('type')->nullable();
+
+            // user_id with default = 1 (no cascade delete)
+            $table->foreignId('user_id')
+                  ->default(1)
+                  ->constrained()
+                  ->restrictOnDelete(); // أو احذف هذا السطر لو حاب السلوك الافتراضي فقط
+
             $table->timestamps();
         });
     }

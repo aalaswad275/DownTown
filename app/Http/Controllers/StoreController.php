@@ -63,7 +63,7 @@ class StoreController extends Controller
         $store->user_id=Auth::user()->id;
         $store->image=$imageslider;
         $store->save();
-        return redirect()->route('store.index')->with('success','تمت اضافة المتجر بنجاح') ;
+        return redirect()->route('stores.index')->with('success','تمت اضافة المتجر بنجاح') ;
     }
 
     /**

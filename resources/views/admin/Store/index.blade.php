@@ -34,7 +34,7 @@
                     {{ __('Edit') }}
                 </a>
 
-                <form action="{{ route('store.destroy',$store->id) }}" method="POST" class="d-inline">
+                <form action="{{ route('stores.destroy',$store->id) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')
                     <button onclick="return confirm('{{ __('Are you sure?') }}')" class="btn btn-danger btn-sm">

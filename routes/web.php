@@ -7,7 +7,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\GenralController;
 use App\Http\Controllers\SLiderController;
 use App\Http\Controllers\LandMarksController;
-use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GalleryController;
 
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -50,12 +50,13 @@ Route::get('/maingallery',[App\Http\Controllers\GenralController::class, 'galler
 Route::get('/service',[App\Http\Controllers\GenralController::class, 'service'])->name('service');
 Route::get('/PlacePhotos/{id}',[App\Http\Controllers\GenralController::class, 'Photos'])->name('PlacePhotos');
 Route::get('/PlaceInfo/{id}',[App\Http\Controllers\GenralController::class, 'Info'])->name('PlaceInfo');
+Route::get('/comments/{id}',[App\Http\Controllers\GenralController::class, 'Comment'])->name('comments.store');
 Route::get('/landmark',[App\Http\Controllers\GenralController::class, 'landmark'])->name('landmark');
 
 Route::resource('Store',App\Http\Controllers\StoreController::class);
 Route::resource('sliders',App\Http\Controllers\SLiderController::class);
 Route::resource('landmarks',App\Http\Controllers\LandMarksController::class);
-Route::resource('comment',App\Http\Controllers\CommentController::class);
+Route::resource('comment',App\Http\Controllers\CommentsController::class);
 Route::resource('gallery',App\Http\Controllers\GalleryController::class);
 Route::resource('stores',App\Http\Controllers\StoreController::class);
 Auth::routes();

@@ -18,8 +18,8 @@ class CommentsController extends Controller
     public function index()
     {
         //
-        $comments=Comment::latest()->paginate(10)  ;
-        return view('backend.comments.index',compact('comments'));
+        $comments=Comments::latest()->paginate(10)  ;
+        return view('admin.comments.index',compact('comments'));
     }
 
     /**
@@ -49,7 +49,7 @@ class CommentsController extends Controller
         $comment->store_id=$request->store_id;
         $comment->gallery_id=$request->gallery_id;
         $comment->rating=$request->rating;
-        $comment->user_id=1; //Auth::id();
+        $comment->user_id=Auth::id();
         $comment->save();
         return redirect()->back()->with('success','تمت اضافة التعليق بنجاح') ;
     }

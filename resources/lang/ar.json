@@ -1059,9 +1059,64 @@
     "Read More": "اقرأ المزيد",
     "Our Gallery": "معرض الصور",
     "Enjoy breath taking photos from libya": "استمتع بصور خلابة من ليبيا",
-    "All": "الكل"
+    "All": "الكل", "Our Most Popular Landmarks": "أشهر المعالم السياحية",
+    "Saraya Alhamra": "السرايا الحمراء",
+    "Sabratha Ruins": "آثار صبراتة",
+    "Leptis Magna Ruins": "آثار لبدة الكبرى",
+    "Ghadames Old Town": "المدينة القديمة غدامس",
+    "Shahat": "شحات",
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "About Us": "من نحن",
 
+    "about us": "من نحن",
+    "Welcome to": "مرحباً بكم في",
+    "Libya": "ليبيا",
 
+    "Welcome to our Libyan Tourism Platform — your gateway to discovering the beauty, history, and culture of Libya.\nWe provide travelers, researchers, and locals with reliable information about Libya’s most stunning destinations, from ancient archaeological sites and Mediterranean beaches to desert adventures and cultural experiences.":
+    "مرحباً بكم في منصتنا السياحية الليبية — بوابتكم لاكتشاف جمال وتاريخ وثقافة ليبيا.\nنقدم للمسافرين والباحثين والسكان المحليين معلومات موثوقة عن أبرز الوجهات السياحية في ليبيا، من المواقع الأثرية القديمة وشواطئ البحر المتوسط إلى مغامرات الصحراء والتجارب الثقافية.",
+
+    "Our mission is to promote Libyan tourism by offering up-to-date guides, practical travel tips, and a rich showcase of what makes Libya unique.\nWe aim to support local tourism initiatives, highlight hidden gems, and connect visitors with trusted services that make every journey safe and memorable.":
+    "مهمتنا هي تعزيز السياحة الليبية من خلال تقديم أدلة محدثة ونصائح سفر عملية، وإبراز ما يجعل ليبيا مميزة.\nنسعى لدعم المبادرات السياحية المحلية، وتسليط الضوء على الكنوز المخفية، وربط الزوار بخدمات موثوقة تجعل كل رحلة آمنة ولا تُنسى.",
+
+    "Meet Our Team": "تعرف على فريقنا",
+    "First class web developers": "مطورو ويب من الدرجة الأولى",
+     "First Class Flights": "رحلات جوية من الدرجة الأولى",
+    "Handpicked Hotels": "فنادق مختارة بعناية",
+    "5 Star Accommodations": "إقامات خمس نجوم",
+    "Latest Model Vehicles": "مركبات بأحدث الموديلات",
+    "150 Premium City Tours": "150 جولة سياحية مميزة",
+    "24/7 Service": "خدمة على مدار الساعة",
+
+    "Backend Developer": "مطور Backend",
+    "Frontend Developer": "مطور Frontend",
+
+    "Eng. Fatima-Alzahraa Mohamed ": "م. فاطمة الزهراء محمد",
+    "Eng. Emtenan Abdulmajeed": "م. امتنان عبدالمجيد",
+    "Eng. Jomana hussin": "م. جمانة حسين",
+    "Eng. Malak Saleh ": "م. ملك صالح",
+    "Eng. Saja Mohammed ": "م. سجى محمد",
+    "Eng. Nosiba Ismael  ": "م. نسيبة إسماعيل",
+    "Stay Connected": "ابقَ على تواصل",
+    "Discover Libya With Us": "اكتشف ليبيا معنا",
+    "Subscribe to our newsletter and be the first to explore Libya's most beautiful landmarks, hidden gems, cultural, stories  and travel tips. Get inspired for your next journey and never miss an update.":
+     "اشترك في نشرتنا البريدية لتكون أول من يكتشف أجمل المعالم الليبية، الكنوز المخفية، القصص الثقافية، ونصائح السفر. كن دائماً على اطلاع واستعد لرحلتك القادمة.",
+    "Enter your email address": "أدخل بريدك الإلكتروني",
+    "Trending Now": "الأكثر تداولاً الآن",
+    "Most Visited Landmarks This Hour": "المعالم الأكثر زيارة خلال هذه الساعة",
+    "Explore the landmarks that visitors are viewing the most right now. Discover what is trending and popular at this very moment.": "استكشف المعالم التي يزورها الزوار بكثرة الآن، وتعرّف على الوجهات الأكثر رواجاً في هذه اللحظة.",
+    "This Hour": "هذه الساعة",
+    "View Landmark": "عرض المعلم",
+    "Mon": "الاثنين",
+    "Tue": "الثلاثاء",
+    "Wed": "الأربعاء",
+    "Thu": "الخميس",
+    "Fri": "الجمعة",
+    "Sat": "السبت",
+    "Sun": "الأحد",
+    "Closed": "مغلق",
+    "Day": "اليوم",
+    "Opening Hours": "ساعات العمل"
 
 
 }

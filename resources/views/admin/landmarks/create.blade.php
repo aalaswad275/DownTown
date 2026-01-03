@@ -13,6 +13,18 @@
         <div class="mb-3">
             <label for="Descrpition"> {{__('enter Descrpition')}}</label>
             <textarea name="description" id="Descrpition" class="form-control"> {{old('description')}}</textarea>
+
+
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+<script>
+ClassicEditor
+    .create(document.querySelector('#Descrpition'))
+    .catch(error => {
+        console.error(error);
+    });
+</script>
         </div>
         <div class="mb-3">
             <label for="address"> {{__('enter address')}}</label>

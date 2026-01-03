@@ -35,12 +35,12 @@
                 </div>
               </div>
 
-            
-              <div class="row my-4">
+
+            <div class="row my-4">
 
 
-                   @foreach($landmarks->gallery ?? [] as $img)
-                   <div class="col-md-4">
+            @foreach($landmarks->gallery ?? [] as $img)
+                <div class="col-md-4">
                   <div class="card mb-4 shadow">
                     <div class="card-body my-n3">
                       <div class="row align-items-center">

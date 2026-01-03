@@ -133,10 +133,10 @@ if ($request->hasFile('gallery')) {
     public function edit(string $id)
     {
         //
-        $landmarks= Landmark::find($id);
+        $landmark= Landmark::find($id);
         $cities = City::All();
         $catgories= Category::All();
-        return view('admin.landmarks.edit',compact('landmarks','cities','catgories'));
+        return view('admin.landmarks.edit',compact('landmark','cities','catgories'));
     }
 
     /**

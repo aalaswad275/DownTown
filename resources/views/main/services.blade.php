@@ -55,10 +55,9 @@
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
                                         <h5 class="mb-4">{{ __('Libyan Culture & Lifestyle') }}</h5>
-<p class="mb-0">
-    {{ __('Experience authentic Libyan culture, traditional clothing, local customs, music, festivals, and the unique lifestyle of Libyan communities.') }}
-</p>
-
+                                            <p class="mb-0">
+                                                {{ __('Experience authentic Libyan culture, traditional clothing, local customs, music, festivals, and the unique lifestyle of Libyan communities.') }}
+                                            </p>
                                     </div>
                                     <div class="service-icon p-4">
                                         <i class="fa fa-user fa-4x text-primary"></i>
@@ -69,9 +68,9 @@
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-end">
                                         <h5 class="mb-4">{{ __('Local Events & Heritage Activities') }}</h5>
-<p class="mb-0">
-    {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
-</p>
+                                            <p class="mb-0">
+                                                {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
+                                            </p>
 
                                     </div>
                                     <div class="service-icon p-4">
@@ -90,9 +89,9 @@
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">{{ __('Local Events & Heritage Activities') }}</h5>
-<p class="mb-0">
-    {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
-</p>
+                                            <p class="mb-0">
+                                                {{ __('Stay updated with cultural events, heritage festivals, exhibitions, and traditional celebrations across different Libyan regions.') }}
+                                            </p>
 
                                     </div>
                                 </div>
@@ -104,10 +103,9 @@
                                     </div>
                                     <div class="service-content">
                                        <h5 class="mb-4">{{ __('Travel Planning & Recommendations') }}</h5>
-<p class="mb-0">
-    {{ __('Get practical travel tips, recommended routes, best visiting times, and essential information for exploring Libya safely and comfortably.') }}
-</p>
-
+                                            <p class="mb-0">
+                                                {{ __('Get practical travel tips, recommended routes, best visiting times, and essential information for exploring Libya safely and comfortably.') }}
+                                            </p>
                                     </div>
                                 </div>
                             </div>
@@ -118,9 +116,9 @@
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">{{ __('Educational & Research Resources') }}</h5>
-                                <p class="mb-0">
-                                    {{ __('Access reliable information, historical references, and educational resources for students, researchers, and history enthusiasts.') }}
-                                </p>
+                                            <p class="mb-0">
+                                                {{ __('Access reliable information, historical references, and educational resources for students, researchers, and history enthusiasts.') }}
+                                            </p>
                                     </div>
                                 </div>
                             </div>
@@ -131,9 +129,9 @@
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">{{ __('Traditional Libyan Cuisine') }}</h5>
-                                <p class="mb-0">
-                                    {{ __('Discover traditional Libyan dishes, local ingredients, and authentic flavors that reflect the country’s rich culinary heritage.') }}
-                                </p>
+                                            <p class="mb-0">
+                                                {{ __('Discover traditional Libyan dishes, local ingredients, and authentic flavors that reflect the country’s rich culinary heritage.') }}
+                                            </p>
                                     </div>
                                 </div>
                             </div>

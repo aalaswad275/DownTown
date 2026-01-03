@@ -13,4 +13,8 @@ class Landmark extends Model
         'tags' => 'array',
         'opening_hours' => 'array',
     ];
+    public function comments()
+{
+    return $this->hasMany(Comments::class);
+}
 }
