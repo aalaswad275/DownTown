@@ -5,6 +5,7 @@ use App\Models\Slider;
 use App\Models\Gallery;
 use App\Models\Landmark;
 use App\Models\Store;
+use App\Models\Comments;
 use Illuminate\Http\Request;
 
 class GenralController extends Controller
@@ -78,11 +79,11 @@ class GenralController extends Controller
             'comment'=>'required',
         ]);
 
-        $landmark->comments()->create([
-            'name'=>$request->name,
-            'landmark_id'=>$id,
-            'comment'=>$request->comment,
-        ]);
+        $comments=new Comments();
+        $comments->comment=$request->comment;
+        $comments->landmark_id=$id;
+        $comments->save();
+        $comments = $landmark->comments;
 
         return view('main.placeinfo',compact('landmark','comments'));
        }

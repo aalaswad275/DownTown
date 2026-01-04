@@ -179,7 +179,7 @@
                 <div class="bg-light rounded h-100 d-flex flex-column justify-content-center p-5">
                     @foreach($comments ?? [] as $comment)
                     <div class="mb-4">
-                        <h6 class="mb-1">{{ $comment->user_name }} <span class="text-muted">({{ $comment->created_at->format('Y-m-d H:i') }})</span></h6>
+                        <h6 class="mb-1"> <span class="text-muted">({{ $comment->created_at->format('Y-m-d H:i') }})</span></h6>
                         <p>{{ $comment->comment}}</p>
                     </div>
                     @endforeach
@@ -188,9 +188,10 @@
                     <h5>{{__('Add a Comment')}}</h5>
                     <form action="{{ route('comments.store', $landmark->id) }}" method="POST">
                         @csrf
+                        @method('GET')
                         <div class="mb-3">
                             <label for="user_name" class="form-label">{{__('Your Name')}}</label>
-                            <input type="text" class="form-control" id="user_name" name="user_name" required>
+                            <input type="text" class="form-control" id="user_name" name="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="comment" class="form-label">{{__('Your Comment')}}</label>
