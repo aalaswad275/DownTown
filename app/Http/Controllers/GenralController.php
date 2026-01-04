@@ -92,5 +92,10 @@ class GenralController extends Controller
 
         return view('main.landmark',compact('landmarks'));
        }
+       public function landmarksearch($name){
+        $landmarks = Landmark::Where('name','like','%'.$name.'%')->get();
+
+        return view('main.landmark',compact('landmarks'));
+       }
 
 }
