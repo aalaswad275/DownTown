@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2026 at 02:41 PM
+-- Generation Time: Jan 06, 2026 at 09:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -260,6 +260,7 @@ INSERT INTO `cities` (`id`, `name_en`, `name`, `state`, `state_ar`, `country_id`
 
 CREATE TABLE `comments` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL,
   `landmark_id` int(11) DEFAULT 0,
   `store_id` int(11) DEFAULT 0,
@@ -273,11 +274,13 @@ CREATE TABLE `comments` (
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` (`id`, `comment`, `landmark_id`, `store_id`, `active`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'جميلة', 9, 0, 1, 2, '2026-01-03 22:45:03', '2026-01-03 22:45:03'),
-(2, 'المكان جميل جدًا ويستحق الزيارة، الأجواء رائعة والمنظر خلاب.', 9, 0, 0, NULL, '2026-01-03 20:54:52', '2026-01-03 20:54:52'),
-(3, 'المكان جميل جدًا ويستحق الزيارة، الأجواء رائعة والمنظر خلاب.', 9, 0, 0, NULL, '2026-01-03 20:56:56', '2026-01-03 20:56:56'),
-(4, 'المكان جميل جدًا ويستحق الزيارة، الأجواء رائعة والمنظر خلاب.', 9, 0, 0, NULL, '2026-01-03 21:00:23', '2026-01-03 21:00:23');
+INSERT INTO `comments` (`id`, `name`, `comment`, `landmark_id`, `store_id`, `active`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'علي', 'جميلة', 9, 0, 1, 2, '2026-01-03 22:45:03', '2026-01-03 22:45:03'),
+(2, 'اميرة', 'المكان جميل جدًا ويستحق الزيارة، الأجواء رائعة والمنظر خلاب.', 9, 0, 0, NULL, '2026-01-03 20:54:52', '2026-01-03 20:54:52'),
+(3, 'محمد', 'المكان جميل جدًا ويستحق الزيارة، الأجواء رائعة والمنظر خلاب.', 9, 0, 0, NULL, '2026-01-03 20:56:56', '2026-01-03 20:56:56'),
+(4, 'مسرة', 'المكان جميل جدًا ويستحق الزيارة، الأجواء رائعة والمنظر خلاب.', 9, 0, 0, NULL, '2026-01-03 21:00:23', '2026-01-03 21:00:23'),
+(5, 'Adam ', 'very nice place', 9, 0, 0, NULL, '2026-01-04 13:03:58', '2026-01-04 13:03:58'),
+(6, 'mike', 'very nice place', 9, 0, 0, NULL, '2026-01-04 13:05:02', '2026-01-04 13:05:02');
 
 -- --------------------------------------------------------
 
@@ -325,6 +328,7 @@ CREATE TABLE `landmarks` (
   `ratings` double(2,1) NOT NULL DEFAULT 0.0,
   `views` int(11) NOT NULL DEFAULT 0,
   `main` tinyint(1) NOT NULL DEFAULT 0,
+  `user_id` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -333,9 +337,9 @@ CREATE TABLE `landmarks` (
 -- Dumping data for table `landmarks`
 --
 
-INSERT INTO `landmarks` (`id`, `name`, `slug`, `description`, `image`, `gallery`, `address`, `location`, `city_id`, `category`, `tags`, `latitude`, `longtude`, `website`, `phone`, `active`, `opening_hours`, `ratings`, `views`, `main`, `created_at`, `updated_at`) VALUES
-(9, 'متحف السرايا الحمراء', 'mthf-alsraya-alhmraaa-694d587f0cfd0', 'متحف تاريخي يقع في قلب مدينة طرابلس، يضم مجموعات ثقافية وتاريخية وآثار تعكس حضارة ليبيا عبر العصور.', '1766676607-photo_2025-12-25_17-19-02.jpg', '[\"frontend\\/img\\/landmarks\\/gallery\\/1766676607_IMG_5437.JPG\",\"frontend\\/img\\/landmarks\\/gallery\\/1766676607_photo_2025-12-25_17-18-38.jpg\",\"frontend\\/img\\/landmarks\\/gallery\\/1766676607_photo_2025-12-25_17-19-08.jpg\"]', 'طرابلس – السرايا الحمراء', NULL, 63, '4', '\"[\\\"\\\\u0645\\\\u0639\\\\u0644\\\\u0645\\\\u0627\\\\u062b\\\\u0627\\\\u0631\\\\u064a\\\",\\\"\\\\u0627\\\\u0644\\\\u0645\\\\u062f\\\\u064a\\\\u0646\\\\u0629\\\\u0627\\\\u0644\\\\u0642\\\\u062f\\\\u064a\\\\u0645\\\\u0629\\\",\\\"\\\\u0645\\\\u062a\\\\u062d\\\\u0641\\\\u060c\\\\u062a\\\\u0627\\\\u0631\\\\u064a\\\\u062e\\\\u060c\\\\u0633\\\\u064a\\\\u0627\\\\u062d\\\\u0629\\\\u060c\\\\u062b\\\\u0642\\\\u0627\\\\u0641\\\\u0629\\\"]\"', 32.8958377, 13.1804977, 'http://www.redcastle.ly', NULL, 1, '\"{\\\"Mon\\\":\\\"09:00-18:00\\\",\\\"Tue\\\":\\\"09:00-18:00\\\",\\\"Wed\\\":\\\"09:00-18:00\\\",\\\"Thu\\\":\\\"09:00-18:00\\\",\\\"Fri\\\":\\\"Closed\\\",\\\"Sat\\\":\\\"09:00-18:00\\\",\\\"Sun\\\":\\\"09:00-18:00\\\"}\"', 4.7, 82, 1, '2025-12-25 13:30:07', '2026-01-04 11:24:08'),
-(10, 'آثار صبراتة', 'athar-sbrat-6954d955329ae', '<p>آثار صبراتة هي</p><p>مدينة أثرية ليبية رائعة تعود للعصرين الروماني والبيزنطي، وأهم معالمها المسرح الروماني الكبير، والمنتديات (الفوروم)، والمعابد، والميناء، والحمامات، وكاتدرائية، وهي موقع مُدرج على قائمة <a href=\"https://www.google.com/search?client=firefox-b-d&amp;q=%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AB+%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A+%D9%84%D9%84%D9%8A%D9%88%D9%86%D8%B3%D9%83%D9%88&amp;mstk=AUtExfDOFoYTrmQh_16_THk-5cDIWw6QXbrCb9sh2SDnYtOo3aKaoC8LI8zpZJUo-HgqN2UILfIZe_7rcNQJQTQ8HHTtjRxa4x-G1nhybxHoafKyQJONwTdQEy07FI0pkT3bthzEhiuW5Jh7nERYVfWG8Mu3EiGlCBOR9PRBiw4fMrrnxqM&amp;csui=3&amp;ved=2ahUKEwismLa5reeRAxWyVaQEHc5ZLVEQgK4QegQIARAC\">التراث العالمي لليونسكو</a> (لكن مُهدد بالخطر)، وتضم كنوزاً من الفسيفساء والنصب التذكارية التي تم الكشف عنها جزئياً من خلال أعمال التنقيب الإيطالية والليبية، وتمثل شاهدًا على الحضارات التي تعاقبت عليها.&nbsp;</p><p>&nbsp;</p><p><strong>أهم معالمها:</strong></p><p>&nbsp;</p><ul><li><strong>المسرح الروماني:</strong> أحد أكبر وأشهر مسارح شمال أفريقيا، ويُستخدم حالياً لإقامة الحفلات والمهرجانات.</li><li><strong>الميناء الروماني والبيزنطي:</strong> بقايا أرصفة وميناء قديم يطل على البحر.</li><li><strong>المنتدى (الفوروم):</strong> ساحة المدينة الرئيسية التي كانت تضم المباني العامة.</li><li><a href=\"https://www.google.com/search?client=firefox-b-d&amp;q=%D8%A7%D9%84%D8%A8%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D9%83%D8%A7&amp;mstk=AUtExfDOFoYTrmQh_16_THk-5cDIWw6QXbrCb9sh2SDnYtOo3aKaoC8LI8zpZJUo-HgqN2UILfIZe_7rcNQJQTQ8HHTtjRxa4x-G1nhybxHoafKyQJONwTdQEy07FI0pkT3bthzEhiuW5Jh7nERYVfWG8Mu3EiGlCBOR9PRBiw4fMrrnxqM&amp;csui=3&amp;ved=2ahUKEwismLa5reeRAxWyVaQEHc5ZLVEQgK4QegQIAxAE\"><strong>البازيليكا</strong></a><strong>:</strong> دار العدالة والأسواق، وهي مبنى مستطيل الشكل مع حنية نصف دائرية للقضاء.</li><li><strong>المعابد:</strong> بقايا معابد متنوعة تعكس التأثيرات الرومانية والقرطاجية.</li><li><strong>الحمامات العامة:</strong> توجد بقايا حمامات رومانية شهيرة، مثل حمام \"أدريان\".</li><li><strong>المساكن:</strong> أحياء سكنية رومانية وبيزنطية تظهر نمط الحياة القديم.</li><li><strong>الأبراج والبوابات البيزنطية:</strong> أسوار وأبراج دفاعية شيدت لاحقاً.&nbsp;</li><li>&nbsp;</li></ul><p><strong>التاريخ والحماية:</strong></p><p>&nbsp;</p><ul><li>أسست كمدينة فينيقية ثم ازدهرت تحت الحكم الروماني والبيزنطي.</li><li>تعرضت لأضرار بسبب الزلازل (خاصة عام 365 م) والحروب.</li><li>تم التنقيب والحفر المكثف بين عامي 1923 و 1936، مما كشف عن معظم الآثار.</li><li>أدرجت كموقع تراث عالمي لليونسكو عام 1982، ولكن تم إضافتها لقائمة المواقع المهددة بالخطر عام 2016 بسبب الصراعات في ليبيا.&nbsp;</li><li>&nbsp;</li></ul><p><strong>زيارة الآثار:</strong></p><p>&nbsp;</p><ul><li>المدينة الأثرية هي متحف مفتوح يضم شوارع مرصوفة، وأعمدة، وأقواس، وتماثيل، وتُعتبر جوهرة الحضارات القديمة في شمال أفريقيا.</li></ul>', '1767168341-Slider1.jpg', '[\"frontend\\/img\\/landmarks\\/gallery\\/1767168341_Slider3.jpg\"]', 'مدخل صبراتة', NULL, 69, '2', '\"[]\"', 32.8036797, 12.4830412, 'https://www.archaeology.ly/gallaries/gallary/sabratha/index.html', NULL, 0, '\"{\\\"Mon\\\":\\\"00:00-12:00\\\",\\\"Tue\\\":\\\"Closed\\\",\\\"Wed\\\":\\\"Closed\\\",\\\"Thu\\\":\\\"Closed\\\",\\\"Fri\\\":\\\"Closed\\\",\\\"Sat\\\":\\\"Closed\\\",\\\"Sun\\\":\\\"Closed\\\"}\"', 0.0, 10, 0, '2025-12-31 06:05:41', '2026-01-03 09:45:46');
+INSERT INTO `landmarks` (`id`, `name`, `slug`, `description`, `image`, `gallery`, `address`, `location`, `city_id`, `category`, `tags`, `latitude`, `longtude`, `website`, `phone`, `active`, `opening_hours`, `ratings`, `views`, `main`, `user_id`, `created_at`, `updated_at`) VALUES
+(9, 'متحف السرايا الحمراء', 'mthf-alsraya-alhmraaa-694d587f0cfd0', 'متحف تاريخي يقع في قلب مدينة طرابلس، يضم مجموعات ثقافية وتاريخية وآثار تعكس حضارة ليبيا عبر العصور.', '1766676607-photo_2025-12-25_17-19-02.jpg', '[\"frontend\\/img\\/landmarks\\/gallery\\/1766676607_IMG_5437.JPG\",\"frontend\\/img\\/landmarks\\/gallery\\/1766676607_photo_2025-12-25_17-18-38.jpg\",\"frontend\\/img\\/landmarks\\/gallery\\/1766676607_photo_2025-12-25_17-19-08.jpg\"]', 'طرابلس – السرايا الحمراء', NULL, 63, '4', '\"[\\\"\\\\u0645\\\\u0639\\\\u0644\\\\u0645\\\\u0627\\\\u062b\\\\u0627\\\\u0631\\\\u064a\\\",\\\"\\\\u0627\\\\u0644\\\\u0645\\\\u062f\\\\u064a\\\\u0646\\\\u0629\\\\u0627\\\\u0644\\\\u0642\\\\u062f\\\\u064a\\\\u0645\\\\u0629\\\",\\\"\\\\u0645\\\\u062a\\\\u062d\\\\u0641\\\\u060c\\\\u062a\\\\u0627\\\\u0631\\\\u064a\\\\u062e\\\\u060c\\\\u0633\\\\u064a\\\\u0627\\\\u062d\\\\u0629\\\\u060c\\\\u062b\\\\u0642\\\\u0627\\\\u0641\\\\u0629\\\"]\"', 32.8958377, 13.1804977, 'http://www.redcastle.ly', NULL, 1, '\"{\\\"Mon\\\":\\\"09:00-18:00\\\",\\\"Tue\\\":\\\"09:00-18:00\\\",\\\"Wed\\\":\\\"09:00-18:00\\\",\\\"Thu\\\":\\\"09:00-18:00\\\",\\\"Fri\\\":\\\"Closed\\\",\\\"Sat\\\":\\\"09:00-18:00\\\",\\\"Sun\\\":\\\"09:00-18:00\\\"}\"', 4.7, 96, 1, 1, '2025-12-25 13:30:07', '2026-01-06 13:54:34'),
+(10, 'آثار صبراتة', 'athar-sbrat-6954d955329ae', '<p>آثار صبراتة هي</p><p>مدينة أثرية ليبية رائعة تعود للعصرين الروماني والبيزنطي، وأهم معالمها المسرح الروماني الكبير، والمنتديات (الفوروم)، والمعابد، والميناء، والحمامات، وكاتدرائية، وهي موقع مُدرج على قائمة <a href=\"https://www.google.com/search?client=firefox-b-d&amp;q=%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AB+%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A+%D9%84%D9%84%D9%8A%D9%88%D9%86%D8%B3%D9%83%D9%88&amp;mstk=AUtExfDOFoYTrmQh_16_THk-5cDIWw6QXbrCb9sh2SDnYtOo3aKaoC8LI8zpZJUo-HgqN2UILfIZe_7rcNQJQTQ8HHTtjRxa4x-G1nhybxHoafKyQJONwTdQEy07FI0pkT3bthzEhiuW5Jh7nERYVfWG8Mu3EiGlCBOR9PRBiw4fMrrnxqM&amp;csui=3&amp;ved=2ahUKEwismLa5reeRAxWyVaQEHc5ZLVEQgK4QegQIARAC\">التراث العالمي لليونسكو</a> (لكن مُهدد بالخطر)، وتضم كنوزاً من الفسيفساء والنصب التذكارية التي تم الكشف عنها جزئياً من خلال أعمال التنقيب الإيطالية والليبية، وتمثل شاهدًا على الحضارات التي تعاقبت عليها.&nbsp;</p><p>&nbsp;</p><p><strong>أهم معالمها:</strong></p><p>&nbsp;</p><ul><li><strong>المسرح الروماني:</strong> أحد أكبر وأشهر مسارح شمال أفريقيا، ويُستخدم حالياً لإقامة الحفلات والمهرجانات.</li><li><strong>الميناء الروماني والبيزنطي:</strong> بقايا أرصفة وميناء قديم يطل على البحر.</li><li><strong>المنتدى (الفوروم):</strong> ساحة المدينة الرئيسية التي كانت تضم المباني العامة.</li><li><a href=\"https://www.google.com/search?client=firefox-b-d&amp;q=%D8%A7%D9%84%D8%A8%D8%A7%D8%B2%D9%8A%D9%84%D9%8A%D9%83%D8%A7&amp;mstk=AUtExfDOFoYTrmQh_16_THk-5cDIWw6QXbrCb9sh2SDnYtOo3aKaoC8LI8zpZJUo-HgqN2UILfIZe_7rcNQJQTQ8HHTtjRxa4x-G1nhybxHoafKyQJONwTdQEy07FI0pkT3bthzEhiuW5Jh7nERYVfWG8Mu3EiGlCBOR9PRBiw4fMrrnxqM&amp;csui=3&amp;ved=2ahUKEwismLa5reeRAxWyVaQEHc5ZLVEQgK4QegQIAxAE\"><strong>البازيليكا</strong></a><strong>:</strong> دار العدالة والأسواق، وهي مبنى مستطيل الشكل مع حنية نصف دائرية للقضاء.</li><li><strong>المعابد:</strong> بقايا معابد متنوعة تعكس التأثيرات الرومانية والقرطاجية.</li><li><strong>الحمامات العامة:</strong> توجد بقايا حمامات رومانية شهيرة، مثل حمام \"أدريان\".</li><li><strong>المساكن:</strong> أحياء سكنية رومانية وبيزنطية تظهر نمط الحياة القديم.</li><li><strong>الأبراج والبوابات البيزنطية:</strong> أسوار وأبراج دفاعية شيدت لاحقاً.&nbsp;</li><li>&nbsp;</li></ul><p><strong>التاريخ والحماية:</strong></p><p>&nbsp;</p><ul><li>أسست كمدينة فينيقية ثم ازدهرت تحت الحكم الروماني والبيزنطي.</li><li>تعرضت لأضرار بسبب الزلازل (خاصة عام 365 م) والحروب.</li><li>تم التنقيب والحفر المكثف بين عامي 1923 و 1936، مما كشف عن معظم الآثار.</li><li>أدرجت كموقع تراث عالمي لليونسكو عام 1982، ولكن تم إضافتها لقائمة المواقع المهددة بالخطر عام 2016 بسبب الصراعات في ليبيا.&nbsp;</li><li>&nbsp;</li></ul><p><strong>زيارة الآثار:</strong></p><p>&nbsp;</p><ul><li>المدينة الأثرية هي متحف مفتوح يضم شوارع مرصوفة، وأعمدة، وأقواس، وتماثيل، وتُعتبر جوهرة الحضارات القديمة في شمال أفريقيا.</li></ul>', '1767168341-Slider1.jpg', '[\"frontend\\/img\\/landmarks\\/gallery\\/1767168341_Slider3.jpg\"]', 'مدخل صبراتة', NULL, 69, '2', '\"[]\"', 32.8036797, 12.4830412, 'https://www.archaeology.ly/gallaries/gallary/sabratha/index.html', NULL, 0, '\"{\\\"Mon\\\":\\\"00:00-12:00\\\",\\\"Tue\\\":\\\"Closed\\\",\\\"Wed\\\":\\\"Closed\\\",\\\"Thu\\\":\\\"Closed\\\",\\\"Fri\\\":\\\"Closed\\\",\\\"Sat\\\":\\\"Closed\\\",\\\"Sun\\\":\\\"Closed\\\"}\"', 0.0, 12, 1, 1, '2025-12-31 06:05:41', '2026-01-06 13:51:50');
 
 -- --------------------------------------------------------
 
@@ -436,8 +440,8 @@ CREATE TABLE `sliders` (
 
 INSERT INTO `sliders` (`id`, `user_id`, `title`, `subtitle`, `description`, `image`, `link`, `order`, `active`, `created_at`, `updated_at`) VALUES
 (8, 1, 'قوس ماركوس أوريليوس', 'Arch of Marcus Aurelius (Tripoli)', 'قوس ماركوس أوريليوس في مدينة طرابلس عاصمة ليبيا. هو قوس لتخليد ذكرى الإمبراطور الروماني ماركوس أوريليوس، والذي حكم في الفترة بين عامي (161 - 180).', '1766672882-Slider1.jpg', NULL, 0, 1, '2025-12-25 12:28:02', '2025-12-25 12:28:02'),
-(9, 1, 'واحة صحراوية ذات كثبان رملية ذهبية', 'Desert Oasis with Golden Sand Dunes', 'صورة جوية خلابة من الأعلى تُظهر امتدادًا شاسعًا لصحراء ذهبية، حيث تمتد الكثبان الرملية الممتدة بلا نهاية تحت وهج غروب الشمس الدافئ. تتراقص ظلال طويلة ناعمة على الكثبان الرملية، مُبرزةً أنماطها الطبيعية. في قلب هذا المشهد القاحل، تُشكّل واحة صغيرة بلون الفيروز، تصطف على جانبيها أشجار النخيل الوارفة، تباينًا بصريًا لافتًا، مُستحضرةً السكينة وجمال الصحراء الخالد', '1766673209-Sldier2.jpg', NULL, 0, 0, '2025-12-25 12:33:29', '2025-12-25 12:33:29'),
-(10, 1, 'مدينة شحات', 'شرق ليبيا', 'شحات أو قورينة (باليونانية: Κυρήνη – Kyrēnē)', '1767000108-Slider3.jpg', NULL, 0, 0, '2025-12-25 12:37:35', '2025-12-29 07:21:49');
+(9, 1, 'واحة صحراوية ذات كثبان رملية ذهبية', 'Desert Oasis with Golden Sand Dunes', 'صورة جوية خلابة من الأعلى تُظهر امتدادًا شاسعًا لصحراء ذهبية، حيث تمتد الكثبان الرملية الممتدة بلا نهاية تحت وهج غروب الشمس الدافئ. تتراقص ظلال طويلة ناعمة على الكثبان الرملية، مُبرزةً أنماطها الطبيعية. في قلب هذا المشهد القاحل، تُشكّل واحة صغيرة بلون الفيروز، تصطف على جانبيها أشجار النخيل الوارفة، تباينًا بصريًا لافتًا، مُستحضرةً السكينة وجمال الصحراء الخالد', '1766673209-Sldier2.jpg', NULL, 0, 1, '2025-12-25 12:33:29', '2025-12-25 12:33:29'),
+(10, 1, 'مدينة شحات', 'شرق ليبيا', 'شحات أو قورينة (باليونانية: Κυρήνη – Kyrēnē)', '1767000108-Slider3.jpg', NULL, 0, 1, '2025-12-25 12:37:35', '2025-12-29 07:21:49');
 
 -- --------------------------------------------------------
 
@@ -467,7 +471,8 @@ CREATE TABLE `stores` (
 
 INSERT INTO `stores` (`id`, `name`, `description`, `address`, `phone`, `email`, `image`, `longitude`, `latitude`, `type`, `user_id`, `created_at`, `updated_at`) VALUES
 (1, 'c', 'v', 'v', '988', 'hh@gmail.com', '1767135205-Sldier2.jpg', NULL, NULL, NULL, 2, '2025-12-30 20:53:25', '2025-12-30 20:53:25'),
-(2, 'c', 'v', 'v', '988', 'hh@gmail.com', '1767135428-Sldier2.jpg', NULL, NULL, NULL, 2, '2025-12-30 20:57:08', '2025-12-30 20:57:08');
+(2, 'c', 'v', 'v', '988', 'hh@gmail.com', '1767135428-Sldier2.jpg', NULL, NULL, NULL, 2, '2025-12-30 20:57:08', '2025-12-30 20:57:08'),
+(3, 'الفندق الكبير', 'فندق', 'طرابلس', '09123456', 'info@mail.com', '1767540058-Slider1.jpg', NULL, NULL, NULL, 3, '2026-01-04 13:20:58', '2026-01-04 13:20:58');
 
 -- --------------------------------------------------------
 
@@ -482,6 +487,7 @@ CREATE TABLE `users` (
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
+  `is_admin` int(11) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -490,9 +496,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'aa', 'a@admin.com', '2025-11-02 08:33:42', 'hfuiu90923587gubievjk', NULL, '2025-11-02 08:33:42', '2025-11-02 08:33:42'),
-(2, 'abd', 'aalaswad275@gmail.com', NULL, '$2y$12$c9kvbgAIv4moLqfq.HyOAuNUJhiWS1vz9q6Edwnb3ceFdrmmhXGnC', NULL, '2025-12-30 13:20:56', '2025-12-30 13:20:56');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `is_admin`, `created_at`, `updated_at`) VALUES
+(1, 'aa', 'a@admin.com', '2025-11-02 08:33:42', 'hfuiu90923587gubievjk', NULL, 0, '2025-11-02 08:33:42', '2025-11-02 08:33:42'),
+(2, 'abd', 'aalaswad275@gmail.com', NULL, '$2y$12$c9kvbgAIv4moLqfq.HyOAuNUJhiWS1vz9q6Edwnb3ceFdrmmhXGnC', NULL, 1, '2025-12-30 13:20:56', '2025-12-30 13:20:56'),
+(3, 'abdulrazag', 'abdulrazaalaswad@gmail.com', NULL, '$2y$12$O9/lRkrFW6xeSnQkQZJ4Z.iZvuWIsEv8LC5voiS9.AEis0oa2i37K', NULL, 0, '2026-01-04 13:20:12', '2026-01-04 13:20:12');
 
 --
 -- Indexes for dumped tables
@@ -598,7 +605,7 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `galleries`
@@ -634,13 +641,13 @@ ALTER TABLE `sliders`
 -- AUTO_INCREMENT for table `stores`
 --
 ALTER TABLE `stores`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
