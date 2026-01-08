@@ -5,18 +5,17 @@
     <div class="row">
         <div class="col-12">
             <form action="{{route('sliders.store')}}" method="post"  enctype="multipart/form-data">
-                // اضافة صور متحركه
-                @csrf // عملية تشفير البيانات
+
+                @csrf
                 @method('POST')
-                // خاص بتحميل الصور
-                // البيانات الخاص بالصوره
-                <div class="mb-3"> // عنوان الصورة
+
+                <div class="mb-3">
                     <label for="title ">{{_('Please Enter title')}}</label>
                     <input type="text" id="title" name='slider_title' value="{{old('title')}}" required >
 
                 </div>
 
-                <div class="mb-3">// عنوان فراعي
+                <div class="mb-3">
                     <label for="subtitle">{{_('Please enter subtitle')}}</label>
                     <input type="text" id="subtitle" name='image_subtitle' value="{{old('subtitle')}}">
                 </div>

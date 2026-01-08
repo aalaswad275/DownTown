@@ -33,7 +33,7 @@
                                     <p class="mb-5 fs-5">{{$s->description}}
                                     </p>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="{{$s->link}}">Discover Now</a>
+
                                     </div>
                                 </div>
                             </div>

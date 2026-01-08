@@ -24,8 +24,6 @@ class SliderController extends Controller
         $slider=Slider::All();
         return view('admin.Slider.index',compact('slider'));
 
-
-
     }
 
     /**
@@ -35,7 +33,6 @@ class SliderController extends Controller
     {
         //
         return view('admin.Slider.create');
-
 
     }
 
